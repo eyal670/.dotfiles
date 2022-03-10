@@ -1,0 +1,23 @@
+{
+  "name": "ER-Snippets",
+  "author": "Eyal Ron",
+  "engines": {
+    "vscode": "^1.11.0"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": "php",
+        "path": "./php.json"
+      },
+      {
+        "language": "css",
+        "path": "./css.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./javascript.json"
+      }
+    ]
+  }
+}

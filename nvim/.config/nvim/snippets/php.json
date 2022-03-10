@@ -1,0 +1,152 @@
+{
+	"display errors": {
+		"prefix": "s.display error",
+		"body": [
+			"ini_set('display_errors', 1);",
+			"ini_set('display_startup_errors',1);",
+			"error_reporting(E_ALL);"
+		],
+		"description": "Display all error on screen"
+	},
+	"wp user is admin": {
+		"prefix": "s.wp user is admin",
+		"body": [
+			"if(current_user_can('administrator')){",
+			"\t$1",
+			"}"
+		],
+		"description": "Display all error on screen"
+	},
+	"WordPress plugin header - Divine": {
+		"prefix": "s.WordPress plughin header - Divine",
+		"body": [
+			"/*",
+			"Plugin Name: ${1:plugin name}",
+			"Description: ${2:plugin description}",
+			"Author: Divine Sites",
+			"Developer: Eyal Ron",
+			"Author URI: http://divinesites.co.il",
+			"Text Domain: Divine Sites",
+			"version: 1.0",
+			"@create date $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND",
+			"@modify date $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND",
+			"*/",
+			"if (!defined('ABSPATH')) exit; // Exit if accessed directly",
+			"$3"
+		],
+		"description": "create WordPress plugin header for Divine"
+	},
+	"Console Log Output": {
+		"prefix": "s.create console log output function",
+		"body": [
+			"/** print data to js console log */",
+			"function console_log(\\$var, \\$label = false, \\$type = 'str', \\$logType = 'log'){",
+			"\t\\$html = '<script>';",
+			"\tif(\\$label){\\$label .= ': ';}",
+			"\tswitch (\\$type) {",
+			"\t\tcase 'obj':",
+			"\t\t\t\\$var = json_encode(\\$var);",
+			"\t\t\tif(\\$logType == 'table'){",
+			"\t\t\t\t\\$html .= 'console.'.\\$logType.'(\\'php output - '.\\$label.'\\');';",
+			"\t\t\t\t\\$html .= 'console.'.\\$logType.'('.\\$var.');';",
+			"\t\t\t}else{",
+			"\t\t\t\t\\$html .= 'console.'.\\$logType.'(\\'php output - '.\\$label.' %o\\','.\\$var.');';",
+			"\t\t\t}",
+			"\t\t\tbreak;",
+			"\t\tdefault:",
+			"\t\t\t\\$html .= 'console.'.\\$logType.'(\\'php output - '.\\$label.\\$var.'\\');';",
+			"\t\t\tbreak;",
+			"\t}",
+			"\t\\$html .= '</script>';",
+			"\techo \\$html;",
+			"}"
+		],
+		"description": "add function to print data to js console log"
+	},
+	"use console_log": {
+		"prefix": "s.use console log output function",
+		"body": [
+			"console_log(${1:obj|str},'${2:label[str] - str|false=def}','${3:varType[Str] - str=def|obj}','${4:logType - log=def|table|error}');",
+			"$5"
+		],
+		"description": "add function to print data to js console log"
+	},
+	"echo pre": {
+		"prefix": "s.echo pre",
+		"body": [
+			"echo '<pre dir=\"ltr\">';",
+			"print_r( '$1: '. \\$$2 );",
+			"echo '</pre>';",
+			"$3"
+		],
+		"description": "add function to print data to js console log"
+	},
+	"exit if accessed directly": {
+		"prefix": "s.exit if accessed directly",
+		"body": [
+			"if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly"
+		],
+		"description": "add function to print data to js console log"
+	},
+	"woo add product field": {
+		"prefix": "s.woo add product field",
+		"body": [
+			"/** add ${1:label} field */",
+			"function ER_add_${2:small_caps_label}_field() {",
+				"\\$args = array(",
+					"'label' => __( '${1:label}', 'woocommerce' ),",
+					"'placeholder' => __( '', 'woocommerce' ),",
+					"'id' => 'ER_p_${2:small_caps_label}',",
+				");",
+				"woocommerce_wp_text_input( \\$args );",
+			"}",
+			"add_action( 'woocommerce_product_options_sku', 'ER_add_${2:small_caps_label}_field' );",
+			"/** save ${1:label} address field */",
+			"function ER_save_${2:small_caps_label}_field( \\$post_id ) {",
+				"// grab the ${1:label} address value",
+				"\\$${2:small_caps_label} = isset( \\$_POST[ 'ER_p_${2:small_caps_label}'",
+				"] ) ? sanitize_text_field( \\$_POST[ 'ER_p_${2:small_caps_label}'",
+				"] ) : '';",
+				"// grab the product",
+				"\\$product = wc_get_product( \\$post_id );",
+				"// save the ${1:label} address meta field",
+				"\\$product->update_meta_data( 'ER_p_${2:small_caps_label}', \\$${2:small_caps_label} );",
+				"\\$product->save();",
+			"}",
+			"add_action( 'woocommerce_process_product_meta', 'ER_save_${2:small_caps_label}_field' );",
+			"/** End ${1:label} field */"
+		],
+		"description": "add function to print data to js console log"
+	},
+	"wrap with comment": {
+		"prefix": "s.wrap with comment",
+		"body": [
+			"/** ${1:Description} */",
+			"$2",
+			"/** end of ${1:Description} */"
+		],
+		"description": "add function to print data to js console log"
+	},
+	"create shortcode": {
+		"prefix": "s.create shortcode",
+		"body": [
+			"// Add ${1:shortcode_name} Shortcode",
+			"function ${1:shortcode_name}_shortcode_fn( \\$atts ) {",
+				"\t// Attributes",
+				"\t\\$atts = shortcode_atts(",
+					"\t\tarray(",
+						"\t\t\t'url' => '',",
+						"\t\t\t'text' => 'Link Text',",
+					"\t\t),",
+					"\t\t\\$atts,",
+					"\t\t'${1:shortcode_name}'",
+				"\t);",
+				"\treturn '",
+					"\t\t<a href=\"'.\\$atts['url'].'\">'.\\$atts['text'].'</a>",
+				"\t';",
+						"\t\t}",
+			"add_shortcode( '${1:shortcode_name}', '${1:shortcode_name}_shortcode_fn' );"
+		],
+		"description": "add function to print data to js console log"
+	}
+}
