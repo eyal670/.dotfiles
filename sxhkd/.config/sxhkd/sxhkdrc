@@ -1,0 +1,14 @@
+# terminal emulator
+super + shift + t 
+  alacritty -e tmux a
+
+# rofi
+ctrl + grave ; 1 
+	rofi -show drun -show-icons
+
+ctrl + grave ; grave
+  rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+
+# make sxhkd reload its configuration files:
+super + shift + Escape
+	pkill -USR1 -x sxhkd
