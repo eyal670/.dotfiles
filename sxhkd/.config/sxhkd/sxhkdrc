@@ -1,13 +1,19 @@
 # terminal emulator
-super + shift + t 
+super + shift + Return 
   alacritty -e tmux a
 
 # rofi
-ctrl + grave ; 1 
-	rofi -show drun -show-icons
+ctrl + grave ; {grave,1} 
+  rofi {-modi "clipboard:greenclip print" -show clipboard -run-command '\{cmd\}',-show drun -show-icons}
 
-ctrl + grave ; grave
-  rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+# media keys #
+#play/pause spt
+super + shift + p 
+  spt playback -t 
+
+# list keybinding
+super + shift + question
+  sh $HOME/Scripts/hotkeys.sh 
 
 # make sxhkd reload its configuration files:
 super + shift + Escape
