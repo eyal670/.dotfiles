@@ -1,20 +1,28 @@
-# terminal emulator
+# terminal emulator - alacritty with tmux last session
 super + shift + Return 
   alacritty -e tmux a
 
-# rofi
+# terminal emulator - just alacritty 
+super + shift + t
+  alacritty
+
+# rofi - grave=~ {clipboard, drun}
 ctrl + grave ; {grave,1} 
   rofi {-modi "clipboard:greenclip print" -show clipboard -run-command '\{cmd\}',-show drun -show-icons}
 
 # media keys #
-#play/pause spt
+# play/pause spt
 super + shift + p 
   spt playback -t 
 
+# open calculator
+super + shift + c
+  gnome-calculator
+  
 # list keybinding
-super + shift + question
-  sh $HOME/Scripts/hotkeys.sh 
+super + shift + slash
+  $HOME/Scripts/sxhkd-help.sh 
 
-# make sxhkd reload its configuration files:
+# make sxhkd reload its configuration files
 super + shift + Escape
 	pkill -USR1 -x sxhkd
