@@ -10,10 +10,9 @@ super + shift + t
 ctrl + grave ; {grave,1} 
   rofi {-modi "clipboard:greenclip print" -show clipboard -run-command '\{cmd\}',-show drun -show-icons}
 
-# media keys #
-# play/pause spt
-super + shift + p 
-  spt playback -t 
+# spt - {open,play/pause}
+super + shift + s ; {o,p}
+  {alacritty -e tmux a -t spt,spt playback -t}
 
 # open calculator
 super + shift + c
