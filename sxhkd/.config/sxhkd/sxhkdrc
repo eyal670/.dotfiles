@@ -6,13 +6,13 @@ super + shift + Return
 super + shift + t
   alacritty
 
-# rofi - grave=~ {clipboard, drun}
-ctrl + grave ; {grave,1} 
-  rofi {-modi "clipboard:greenclip print" -show clipboard -run-command '\{cmd\}',-show drun -show-icons}
+# rofi - grave=~ {clipboard, drun, window switcher}
+ctrl + grave ; {grave,1,Tab} 
+  rofi {-modi "clipboard:greenclip print" -show clipboard -run-command '\{cmd\}',-show drun -show-icons,-show window}
 
 # spt - {open,play/pause}
-super + shift + s ; {o,p}
-  {alacritty -e tmux a -t spt,spt playback -t}
+ctrl + grave ; s ; {o,p}
+  {gnome-terminal -- tmux a -t spt,spt playback -t}
 
 # open calculator
 super + shift + c
