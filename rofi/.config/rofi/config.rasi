@@ -1,0 +1,31 @@
+/*******************************************************
+ * ROFI configs i3 Apps menu for EndeavourOS
+ * Maintainer: joekamprad <joekamprad@endeavouros.com>
+ *******************************************************/
+
+configuration {
+    show-icons:				true;
+    display-drun:			"Apps";
+    drun-display-format:		"{name}";
+    scroll-method:			0;
+    disable-history:			false;
+    sidebar-mode:			false;
+    kb-row-up:                     "Up,Control+k";
+    kb-row-down:                   "Down,Control+j";
+    kb-accept-entry:               "Control+m,Return,KP_Enter";
+    terminal:                      "mate-terminal";
+    kb-remove-to-eol:              "Control+Shift+e";
+    kb-remove-char-back:           "BackSpace";
+}
+
+@theme "~/.config/rofi/nord.rasi"
+
+window {
+    background-color: @background;
+    border:           0;
+    padding:          30;
+}
+listview {
+    lines:                          10;
+    columns:                        3;
+}
