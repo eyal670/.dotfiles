@@ -53,7 +53,7 @@
 	"console log": {
 		"prefix": "s.console log",
 		"body": [
-			"console.log(\'$1\');",
+			"console.log('$1');",
 			"$2"
 		],
 		"description": "output console error msg"
