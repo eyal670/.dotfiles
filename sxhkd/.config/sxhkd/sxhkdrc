@@ -6,18 +6,14 @@ super + shift + Return
 super + shift + t
   alacritty
 
-# rofi - grave=~ {clipboard, drun, window switcher}
-ctrl + grave ; {grave,1,Tab} 
-  rofi {-modi "clipboard:greenclip print" -show clipboard -run-command '\{cmd\}',-show drun -show-icons,-show window}
+# rofi - grave=~ {clipboard, drun, windows,calculator}
+ctrl + grave ; {grave,1,Tab,c} 
+  rofi {-modi "clipboard:greenclip print" -show clipboard -run-command '\{cmd\}',-show drun -show-icons,-show window,-show calc -modi calc -no-show-match -no-sort -calc-command "echo -n '\{result\}' | xclip"}
 
 # spt - {open,play/pause}
 ctrl + grave ; s ; {o,p}
   {gnome-terminal -- tmux a -t spt,spt playback -t}
 
-# open calculator
-super + shift + c
-  rofi -show calc -modi calc -no-show-match -no-sort -calc-command "echo -n '{result}' | xclip"
-  
 # list keybinding
 super + shift + slash
   $HOME/Scripts/sxhkd-help.sh 
