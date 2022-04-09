@@ -16,7 +16,7 @@ ctrl + grave ; s ; {o,p}
 
 # open calculator
 super + shift + c
-  gnome-calculator
+  rofi -show calc -modi calc -no-show-match -no-sort -calc-command "echo -n '{result}' | xclip"
   
 # list keybinding
 super + shift + slash
