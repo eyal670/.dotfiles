@@ -420,3 +420,17 @@ ramp-signal-4 = " "
 ramp-signal-foreground = ${color.background}
 ramp-signal-background = ${color.magenta}
 ramp-signal-font = 2
+
+;; ------
+
+[module/ip]
+type=custom/script
+exec = curl -s -4 icanhazip.com 
+format = <label>
+format-prefix = "IP: "
+format-prefix-foreground = ${color.background}
+format-foreground = ${color.background}
+format-background = ${color.magenta}
+tail = true
+interval = 120
+click-left = curl -s -4 icanhazip.com | xclip -selection clipboard && notify-send "ip copied to cliboard"

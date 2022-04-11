@@ -50,7 +50,7 @@ font-2 = "Hack Nerd Font:size=17;4"
 font-3 = "Hack Nerd Font:size=17;4"
 
 # Default
-modules-left = spacing BLD launcher BRD dot GLD cpu YPL memory CPL filesystem CRD dot ;MLD network ;MRD
+modules-left = spacing BLD launcher BRD dot GLD cpu YPL memory CPL filesystem CRD dot MLD ip MRD ;wired-network ;network 
 modules-center = LD bspwm mod RD
 modules-right = RLD battery RRD dot GLD volume GRD ;YPL brightness ;YRD dot BLD time BRD spacing
 
