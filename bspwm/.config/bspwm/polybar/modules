@@ -257,7 +257,7 @@ label-focused-padding = 1
 label-occupied = %index%
 label-unfocused-foreground = ${color.foreground}
 label-unfocused-background = ${color.altblack}
-;label-occupied-underline = ${color.green}
+label-occupied-underline = ${color.altblack}
 label-occupied-padding = 1
 
 label-urgent = %index%
