@@ -12,7 +12,6 @@ get_values() {
 	BATTERY=$(basename "$(find /sys/class/power_supply/*BAT* | head -n 1)")
 	ADAPTER=$( "$(find /sys/class/power_supply/*AC* | head -n 1)")
 	INTERFACE=$(ip link | awk '/state UP/ {print $2}' | tr -d :)
-	IP=$(ip -json route get 8.8.8.8 | jq -r '.[].prefsrc')
 }
 
 ## Write values to `system` file
@@ -28,9 +27,6 @@ set_values() {
 	fi
 	if [[ "$INTERFACE" ]]; then
 		sed -i -e "s/network_interface = .*/network_interface = $INTERFACE/g" "$SFILE"
-	fi
-	if [[ "$IP" ]]; then
-		sed -i -e "s/ip = .*/ip = $IP/g" "$SFILE"
 	fi
 }
 
