@@ -1,11 +1,39 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
-# More info : https://github.com/jaagr/polybar/wiki
+## Files and Directories
+DIR="$HOME/.config/bspwm/polybar"
+SFILE="$DIR/system"
+RFILE="$DIR/.system"
+MFILE="$DIR/.module"
 
-# Install the following applications for polybar and icons in polybar if you are on ArcoLinuxD
-# awesome-terminal-fonts
-# Tip : There are other interesting fonts that provide icons like nerd-fonts-complete
-# --log=error
+## Get system variable values for various modules
+get_values() {
+	CARD=$(basename "$(find /sys/class/backlight/* | head -n 1)")
+	BATTERY=$(basename "$(find /sys/class/power_supply/*BAT* | head -n 1)")
+	ADAPTER=$( "$(find /sys/class/power_supply/*AC* | head -n 1)")
+	INTERFACE=$(ip link | awk '/state UP/ {print $2}' | tr -d :)
+	IP=$(ip -json route get 8.8.8.8 | jq -r '.[].prefsrc')
+}
+
+## Write values to `system` file
+set_values() {
+	if [[ "$ADAPTER" ]]; then
+		sed -i -e "s/adapter = .*/adapter = $ADAPTER/g" "$SFILE"
+	fi
+	if [[ "$BATTERY" ]]; then
+		sed -i -e "s/battery = .*/battery = $BATTERY/g" "$SFILE"
+	fi
+	if [[ "$CARD" ]]; then
+		sed -i -e "s/graphics_card = .*/graphics_card = $CARD/g" "$SFILE"
+	fi
+	if [[ "$INTERFACE" ]]; then
+		sed -i -e "s/network_interface = .*/network_interface = $INTERFACE/g" "$SFILE"
+	fi
+	if [[ "$IP" ]]; then
+		sed -i -e "s/ip = .*/ip = $IP/g" "$SFILE"
+	fi
+}
+
 # Terminate already running bar instances
 killall -q polybar
 
@@ -36,3 +64,4 @@ case $desktop in
     # fi
     ;;
 esac
+
