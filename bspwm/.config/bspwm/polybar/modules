@@ -280,8 +280,8 @@ label-separator-padding = 0
 type = internal/bspwm
 
 format = <label-mode>
-format-background = ${color.YELLOW}
-format-foreground = ${color.BACKGROUND}
+format-background = ${color.altblack}
+format-foreground = ${color.foreground}
 format-padding = 1
 
 label-monocle = "Monocle"
