@@ -321,7 +321,7 @@ super + shift + {1-9,0}
 super + button{4,5}
   bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-,+} 2 ))
 
-## Eyal addon
+## Eyal addon ##
 
 # terminal emulator - alacritty with tmux last session
 super + shift + Return 
@@ -337,7 +337,7 @@ ctrl + grave ; {grave,1,Tab,c}
 
 # spt - {open,play/pause}
 ctrl + grave ; s ; {o,p}
-  {alacritty --class sptScratch\,sptScratch -e  ~/Scripts/launchspt.sh, spt playback -t}
+  {alacritty --class sptScratch\,sptScratch -e spt, spt playback -t}
 
 # open calculator
 super + shift + c
