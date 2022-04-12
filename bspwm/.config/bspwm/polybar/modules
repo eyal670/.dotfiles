@@ -365,7 +365,7 @@ format-prefix-foreground = ${color.background}
 format-foreground = ${color.background}
 format-background = ${color.yellow}
 
-label = "%{A1:alacritty --class scratchpad\,scratchpad -e htop &:} %mb_used% %{A}"
+label = "%{A1:alacritty --class bpytop\,bpytop -e bpytop &:} %mb_used% %{A}"
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
