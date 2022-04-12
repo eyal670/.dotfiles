@@ -23,5 +23,5 @@ xsetroot -cursor_name left_ptr &
 picom --config $HOME/.config/bspwm/picom.conf --vsync --experimental-backends &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
-
-
+#hide mouse when not moving - 'pacman -S unclutter'
+unclutter -grab &
