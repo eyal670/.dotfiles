@@ -343,6 +343,9 @@ ctrl + grave ; s ; {o,p}
 super + shift + c
   gnome-calculator
   
+# lock the screen
+super + shift +x
+  i3lock -t -i $HOME/Pictures/wallpapers/lockImage.png 
 # list keybinding
 super + shift + slash
   $HOME/Scripts/sxhkd-help.sh 
