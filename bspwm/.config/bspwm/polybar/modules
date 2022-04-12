@@ -376,7 +376,8 @@ content-font = 4
 content-foreground= ${color.background}
 content-background = ${color.blue} 
 content-padding=1
-click-left=rofi -show drun -show-icons -font "Noto Sans 14"
+;click-left=rofi -show drun -show-icons -font "Noto Sans 14"
+click-left= $HOME/.config/bspwm/scripts/powermenu.sh
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/wired-network]
