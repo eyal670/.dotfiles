@@ -315,9 +315,9 @@ type = internal/date
 interval = 1
 format-margin = 0
 time = "%I:%M %p"
-time-alt = "%A, %m/%d/%y"
+time-alt = "%A, %d/%m/%y"
 
-format-prefix = 
+format-prefix = %{A1:gnome-calendar &:}%{A} | 
 format-prefix-foreground = ${color.background}
 format-prefix-background = ${color.blue}
 
