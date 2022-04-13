@@ -78,3 +78,5 @@ bindkey '^e' edit-command-line
 # Load zsh-syntax-highlighting; should be last.
 # get the plugin with: git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+# install with: "sudo pacman -S zsh-autosuggestions" or git "clone https://github.com/zsh-users/zsh-autosuggestions.git" 
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
