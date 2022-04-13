@@ -52,6 +52,7 @@ bspc rule -a Bitwarden state=floating center=true
 bspc rule -a pulse state=floating center=true 
 bspc rule -a Anydesk state=floating center=true 
 bspc rule -a bpytop state=floating rectangle=1400x800+0+0 center=true 
+bspc rule -a filezillaEdit state=floating rectangle=1800x1000+0+0 center=true 
 bspc rule -a gnome-calendar state=floating center=true 
 
 bspc rule -a scratchpad sticky=on state=floating hidden=off
