@@ -435,3 +435,17 @@ format-background = ${color.magenta}
 tail = true
 interval = 120
 click-left = curl -s -4 icanhazip.com | xclip -selection clipboard && notify-send "ip copied to cliboard"
+
+;; ------
+
+[module/xkeyboard]
+type = internal/xkeyboard
+; List of indicators to ignore
+blacklist-0 = num lock
+blacklist-1 = scroll lock
+label-layout-padding = 0
+label-indicator-on = ^
+format = <label-layout><label-indicator>
+format-spacing = 0
+format-background = ${color.blue}
+format-foreground = ${color.background} 
