@@ -1,25 +1,23 @@
+# reload sxhkd config
 super + Escape
     pkill -USR1 -x sxhkd
 
+# open Alacritty
 super + Return
    alacritty
-
-/* super + shift + Return */
-/*     krusader */
 
 # Rofi & dmenu
 
 super + d
     rofi -show drun -show-icons -font "Noto Sans 14"
 
+# open powermenu
 super + p
-    rofi -show power-menu -modi power-menu:rofi-power-menu
+    $HOME/.config/bspwm/scripts/powermenu.sh 
 
+# open ranger file manager
 super + r
    alacritty -e "ranger"
-
-alt + z; {a,s}
-   {viddesc, poddesc}
 
 #################
 ## Scratchpads ##
@@ -33,23 +31,24 @@ super + m
 super + shift + n
     $HOME/.config/bspwm/scripts/bspwm-toggle-visibility.sh ranger "alacritty --class ranger,ranger -e ranger"
 
-super + n
-    alacritty --class "pulse,pulse" -e "pulsemixer"
-
+# open bitwarder
 super + shift + v
-    bitwarden
+    bitwarden-desktop
 
-super + g; {n,t,l,g,k,a,o} 
-  {nitrogen,telegram-desktop,lowriter,gimp-2.10,kdenlive,audacium,obs}
+# scratchpad telegram
+super + g; t 
+  $HOME/.config/bspwm/scripts/bspwm-toggle-visibility.sh TelegramDesktop "telegram-desktop" 
 
 super + s; {s,b,a,c,r,d,e}
   {dmsearch,bm.sh,dmconf,clipmenu,rofi-beats, brave snapdrop.net, rofi -show emoji -modi emoji}
 
+# window switcher
 alt + p
  rofi -show
 
 # Application Keybindings
 
+# open browser
 super + w
     google-chrome-stable
 
@@ -346,6 +345,7 @@ super + shift + c
 # lock the screen
 super + shift +x
   i3lock -t -i $HOME/Pictures/wallpapers/lockImage.png 
+
 # list keybinding
 super + shift + slash
   $HOME/Scripts/sxhkd-help.sh 
