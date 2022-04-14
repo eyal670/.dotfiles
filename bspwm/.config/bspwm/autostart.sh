@@ -25,3 +25,10 @@ picom --config $HOME/.config/bspwm/picom.conf --vsync --experimental-backends &
 
 #hide mouse when not moving - 'pacman -S unclutter'
 unclutter -grab &
+
+#lock screen on idle timer
+#options: --not-when-audio, --not-when-fullscreen
+if [ ! $(pgrep "xidlehook") ]; then
+  notify-send "setting lock time"
+  xidlehook --not-when-fullscreen --timer 900 'i3lock -t -i $HOME/Pictures/wallpapers/lockImage.png' '' &
+fi
