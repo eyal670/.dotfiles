@@ -348,9 +348,9 @@ super + shift +x
 
 # list keybinding
 super + shift + slash
-  $HOME/Scripts/sxhkd-help.sh 
+  ~/.config/bspwm/scripts/sxhkd-help.sh
 
-# cycle thrue desktops on all monitors at once
+# cycle thrue desktops on all monitors connected
 super + ctrl + bracket{left,right}
     cycle_dir={prev,next}; \
     bspc desktop "$\{cycle_dir\}.local" -f; \
