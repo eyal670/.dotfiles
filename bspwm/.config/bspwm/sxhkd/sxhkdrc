@@ -350,3 +350,10 @@ super + shift +x
 super + shift + slash
   $HOME/Scripts/sxhkd-help.sh 
 
+# cycle thrue desktops on all monitors at once
+super + ctrl + bracket{left,right}
+    cycle_dir={prev,next}; \
+    bspc desktop "$\{cycle_dir\}.local" -f; \
+    for mon_id in $(bspc query -M -m '.!focused'); do \
+        bspc desktop "$\{mon_id\}:focused#$\{cycle_dir\}.local" -a; \
+    done
