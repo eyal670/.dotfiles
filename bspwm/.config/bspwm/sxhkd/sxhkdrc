@@ -129,9 +129,9 @@ super + q
 # SUPER KEYS
 #################################################################
 
-#Focus selected desktop
-super + Tab
-	bspc desktop -f '^{1-9,10}'
+# Focus selected desktop
+# super + Tab
+# 	bspc desktop -f '^{1-9,10}'
 
 # Increase/decrease window gap on focused desktop
 super + bracket{left,right}
@@ -357,3 +357,7 @@ super + ctrl + bracket{left,right}
     for mon_id in $(bspc query -M -m '.!focused'); do \
         bspc desktop "$\{mon_id\}:focused#$\{cycle_dir\}.local" -a; \
     done
+
+# focus the last node/desktop
+super + {grave,Tab}
+	bspc {node,desktop} -f last
