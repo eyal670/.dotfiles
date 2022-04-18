@@ -7,6 +7,16 @@ function run {
   fi
 }
 
+# make external monitor as primary
+monitor=$(xrandr | grep " connected " | grep -e "HDMI" | awk '{ print$1 }')
+if [ $monitor ]; then
+    xrandr --output $monitor --primary
+    notify-send "autostart.sh:" "set monitor $monitor as primary"
+else
+    xrandr --output eDP-1 --primary
+    notify-send "autostart.sh:" "set monitor eDP-1 as primary"
+fi
+
 $HOME/.config/bspwm/polybar/launch.sh &
 
 #change your keyboard if you need it
