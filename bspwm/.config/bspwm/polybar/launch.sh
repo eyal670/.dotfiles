@@ -44,9 +44,11 @@ case $desktop in
 
     bspwm|/usr/share/xsessions/bspwm)
     if type "xrandr" > /dev/null; then
-      for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+        prim_monitor=$(xrandr | grep " connected " | grep "primary" | cut -d " " -f1)
         MONITOR=$m polybar --reload main -c ~/.config/bspwm/polybar/config &
-      done
+        for m in $(xrandr | grep " connected " | grep -v "primary" | cut -d " " -f1); do
+            MONITOR=$m polybar --reload sec -c ~/.config/bspwm/polybar/config &
+        done
     else
     polybar --reload main -c ~/.config/bspwm/polybar/config &
     fi

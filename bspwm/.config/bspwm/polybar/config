@@ -78,6 +78,64 @@ cursor-scroll =
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
+[bar/sec]
+monitor = ${env:MONITOR}
+monitor-fallback =
+monitor-strict = false
+
+override-redirect = false
+
+bottom = false
+fixed-center = true
+
+width = 100%
+height = 25
+
+offset-x = 0%
+offset-y = 0%
+
+background = ${color.background}
+foreground = ${color.foreground}
+
+radius-top = 0.0
+radius-bottom = 0.0
+
+line-size = 2
+line-color = ${color.blue}
+
+border-size = 6
+border-color = ${color.background}
+
+padding = 0
+
+module-margin-left = 0
+module-margin-right = 0
+
+font-0 = "Hack Nerd Font:size=10;3"
+font-1 = "Hack Nerd Font:size=8;3"
+font-2 = "Hack Nerd Font:size=17;4"
+font-3 = "Hack Nerd Font:size=17;4"
+
+# Default
+modules-left = 
+modules-center = LD bspwm mod RD
+modules-right = BLD xkeyboard BRD spacing
+
+spacing = 0
+dim-value = 1.0
+
+wm-name = bspwm
+locale = 
+
+wm-restack = bspwm
+
+enable-ipc = true
+
+cursor-click = 
+cursor-scroll = 
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
 [settings]
 throttle-output = 5
 throttle-output-for = 10
