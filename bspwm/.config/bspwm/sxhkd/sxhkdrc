@@ -334,6 +334,10 @@ super + shift + t
 ctrl + grave ; {grave,1,Tab,c} 
   rofi {-modi "clipboard:greenclip print" -show clipboard -run-command '\{cmd\}',-show drun -show-icons,-show window,-show calc -modi calc -no-show-match -no-sort -calc-command "echo -n '\{result\}' | xclip"}
 
+# launch an AppImage
+ctrl + grave ; a
+    $HOME/AppImages/$(ls $HOME/AppImages | rofi -dmenu)
+
 # spt - {open,play/pause}
 ctrl + grave ; s ; {o,p}
   {alacritty --class sptScratch\,sptScratch -e spt, spt playback -t}
