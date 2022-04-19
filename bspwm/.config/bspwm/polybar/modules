@@ -461,5 +461,5 @@ format-font = 5
 format-background =${color.cyan}
 format-foreground = ${color.background}
 label = %output%
-click-left = playerctl play-pause
+click-left = playerctl --player=spotifyd play-pause
 click-right = ~/.config/spotifyd/song_notify.sh
