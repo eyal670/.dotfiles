@@ -449,3 +449,16 @@ format = <label-layout><label-indicator>
 format-spacing = 0
 format-background = ${color.blue}
 format-foreground = ${color.background} 
+
+;; ------
+
+[module/cava]
+type = custom/script
+tail = true
+exec = $HOME/.config/bspwm/polybar/scripts/cava.sh
+format = <label>
+format-font = 5
+format-background =${color.cyan}
+format-foreground = ${color.background}
+label = %output%
+click-left = playerctl play-pause
