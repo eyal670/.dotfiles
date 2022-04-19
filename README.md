@@ -8,11 +8,11 @@ this folder will be the git repository,
 inside this folder make sub folders for the dotfiles with the same exact path as the orig from the  $HOME directory
 for example the orig file for Alacritty is:
 
-`/home/eyal/.config/alacritty/alacrotty.yml`
+`~/.config/alacritty/alacrotty.yml`
 
 inside the .dotfiles folder it will be:
 
-`/home/eyal/.dotfiles/alacritty/.config/alacritty`
+`~/.dotfiles/alacritty/.config/alacritty`
 
 than delete the orig file and got to `/home/eyal/.dotfiles` folder and run the command: `stow */`
 
