@@ -8,6 +8,10 @@ bspc rule -r "*"
 #fix for moving spotify to specific workspace
 #bspc config external_rules_command ~/.config/bspwm/scripts/external_rules_command
 
+# fix java apps risizing and menus - for example Arduino IDE
+# first install wmname with: sudo pacman -S wmname
+wmname LG3D
+
 #BSPWM configuration
 bspc config border_width         1
 bspc config window_gap           5
@@ -55,8 +59,10 @@ bspc rule -a bpytop state=floating rectangle=1400x800+0+0 center=true
 bspc rule -a filezillaEdit state=floating rectangle=1800x1000+0+0 center=true 
 bspc rule -a gnome-calendar state=floating center=true 
 bspc rule -a TelegramDesktop state=floating rectangle=1400x800+0+0 center=true 
+bspc rule -a Zulip state=floating rectangle=1400x800+0+0 center=true 
 
 bspc rule -a scratchpad sticky=on state=floating hidden=off
 
 #Send specific window to specific desktop
 bspc rule -a obsidian desktop='9' follow=on
+bspc rule -a Filezilla desktop='5' follow=on
