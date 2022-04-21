@@ -8,8 +8,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(
-    client_id=os.getenv('CLIENT_ID'), # set in .env file
-    client_secret=os.getenv('CLIENT_SECRET'), # set in .env file
+    client_id=os.getenv('CLIENT_ID'),  # set in .env file
+    client_secret=os.getenv('CLIENT_SECRET'),  # set in .env file
     redirect_uri="http://localhost:3090",
     scope="user-read-currently-playing",
     cache_path='./.spotipy_tokens.txt')
