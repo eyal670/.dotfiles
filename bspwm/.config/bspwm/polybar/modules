@@ -462,4 +462,4 @@ format-background =${color.cyan}
 format-foreground = ${color.background}
 label = %output%
 click-left = playerctl --player=spotifyd play-pause
-click-right = ~/.config/spotifyd/song_notify.py
+click-right = ~/.config/spotifyd/scripts/song_notify/song_notify.py
