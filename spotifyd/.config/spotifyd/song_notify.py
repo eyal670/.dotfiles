@@ -1,3 +1,15 @@
+#!/usr/bin/env python3
+
+# Title: song_notify
+# Description: get current playing song on Spotify
+# Notes: add your spotify api keys to .env_template file and rename it to .env
+# Author: Eyal Ron
+# Developer: Eyal Ron
+# License: MIT
+# version: 1.0
+# @create date 2022-04-21 11:44:43
+
+
 import spotipy
 import subprocess as subp
 import os
