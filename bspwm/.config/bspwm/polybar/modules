@@ -460,6 +460,28 @@ format = <label>
 format-font = 5
 format-background =${color.cyan}
 format-foreground = ${color.background}
-label = %output%
+label = " %output% "
 click-left = playerctl --player=spotifyd play-pause
 click-right = ~/.config/spotifyd/scripts/song_notify/song_notify.py
+
+;; ------
+
+[module/next-song]
+type = custom/text
+content = "怜"
+content-font = 1
+content-background = ${color.cyan}
+content-foreground = ${color.background}
+content-padding = 0
+click-left = playerctl --player=spotifyd next
+
+;; ------
+
+[module/prev-song]
+type = custom/text
+content = "玲"
+content-font = 1
+content-background = ${color.cyan}
+content-foreground = ${color.background}
+content-padding = 0
+click-left = playerctl --player=spotifyd previous
