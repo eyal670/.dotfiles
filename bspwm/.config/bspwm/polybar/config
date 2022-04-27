@@ -117,9 +117,9 @@ font-2 = "Hack Nerd Font:size=17;4"
 font-3 = "Hack Nerd Font:size=17;4"
 
 # Default
-modules-left = spacing BLD full-time BRD 
+modules-left = 
 modules-center = LD bspwm mod RD
-modules-right = BLD xkeyboard BRD spacing
+modules-right = BLD xkeyboard BRD spacing BLD full-time BRD 
 
 spacing = 0
 dim-value = 1.0
