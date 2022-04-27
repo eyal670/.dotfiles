@@ -328,6 +328,23 @@ label-padding = 1
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
+[module/full-time]
+type = internal/date
+interval = 1
+format-margin = 0
+time = "%A, %d/%m/%y %I:%M %p"
+
+format-prefix = %{A1:gnome-calendar &:}%{A} | 
+format-prefix-foreground = ${color.background}
+format-prefix-background = ${color.blue}
+
+label = %time%
+label-foreground = ${color.background}
+label-background = ${color.blue}
+label-padding = 1
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
 [module/filesystem]
 type = internal/fs
 
