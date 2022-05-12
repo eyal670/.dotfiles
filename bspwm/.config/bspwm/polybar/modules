@@ -502,3 +502,32 @@ content-background = ${color.cyan}
 content-foreground = ${color.background}
 content-padding = 0
 click-left = playerctl --player=spotifyd previous
+
+;; ------
+
+[module/pacman-updates]
+type=custom/script
+exec =$HOME/.config/bspwm/polybar/scripts/check-arch-updates.sh 
+format = <label>
+format-prefix = " | 祝:"
+format-prefix-foreground = ${color.background}
+format-foreground = ${color.background}
+format-background = ${color.blue}
+tail = true
+interval = 120
+click-left = alacritty -e sudo pacman -Syyu && dunstify "updates complete"
+
+;; ------
+
+[module/aur-updates]
+type=custom/script
+exec =$HOME/.config/bspwm/polybar/scripts/check-aur-updates.sh 
+format = <label>
+format-prefix = " | ﴻ:"
+format-prefix-foreground = ${color.background}
+format-foreground = ${color.background}
+format-background = ${color.blue}
+tail = true
+interval = 120
+click-left = alacritty -e paru -Syyu && dunstify "updates complete"
+
