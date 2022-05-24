@@ -52,6 +52,11 @@ alt + p
 super + w
     google-chrome-stable
 
+# kill browser
+super + shift + w
+    pkill chrome
+
+
 # take a screenshot
 ctrl + alt + s
     flameshot gui
