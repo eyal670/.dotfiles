@@ -2,3 +2,4 @@
 .env
 
 fonts/.local/share/fonts/NerdFonts/.uuid
+spotifyd/.config/spotifyd/scripts/passme_spotify.sh
