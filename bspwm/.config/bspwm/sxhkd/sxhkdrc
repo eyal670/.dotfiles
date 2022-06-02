@@ -12,7 +12,7 @@ super + d
     rofi -show drun -show-icons -font "Noto Sans 14"
 
 # open powermenu
-super + p
+super + shift + p
     $HOME/.config/bspwm/scripts/powermenu.sh 
 
 # open ranger file manager
