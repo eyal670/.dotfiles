@@ -7,7 +7,7 @@ super + Return
    alacritty
 
 # Rofi & dmenu
-
+# launch any application
 super + d
     rofi -show drun -show-icons -font "Noto Sans 14"
 
@@ -126,7 +126,7 @@ super + f
 super + p
 	bspc node --state \~pseudo_tiled
 
-#kill
+#kill - close focused application
 super + q
 	bspc node -c
 
