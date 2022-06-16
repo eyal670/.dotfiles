@@ -5,3 +5,4 @@ fonts/.local/share/fonts/NerdFonts/.uuid
 spotifyd/.config/spotifyd/scripts/passme_spotify.sh
 systemd/.config/systemd/user/default.target.wants
 tmux/.tmux/resurrect
+tmux/.tmux/plugins
