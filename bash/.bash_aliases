@@ -4,3 +4,4 @@ alias lspt="sh ~/Scripts/launchspt.sh"
 alias song_notify="sh ~/Scripts/songnotification.sh"
 alias wttr="curl wttr.in/Atlit"
 alias fcd='cd $(find $HOME/Docker/ $HOME/DevLab/ -type d 2>&1 | grep -v "Permission denied" | fzf)'
+alias listNerds="fc-list | grep Nerd | awk -F ':' '{print \$2,\$3}' | (fzf) | xclip -selection clipboard"
