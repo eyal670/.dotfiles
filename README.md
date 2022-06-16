@@ -1,7 +1,27 @@
 # .dotfiles
 Just my Linux .dotfiles repository
 
-### using GNU Stow
+### How to use
+
+* clone this repo to your home folder
+ * install GNU Stow with the following command: 
+
+    for Arch:
+    ```bash
+    sudo pacman -S stow
+    ``` 
+    for Ubuntu:
+    ```bash
+    sudo apt-get install stow
+    ```
+* cd into the `.dotfiles` repo directory and run `stow */`
+* to install tmux plugins run the command:
+    ```bash
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    ```
+    and from  within tmux do `ctrl-a + I` key binding
+
+### more info about using GNU Stow
 
 make a folder under $ HOME directory called `.dotfiles`
 this folder will be the git repository,
@@ -21,3 +41,4 @@ this go inside each sub folder inside `.dotfiles` folder and will mirror the pat
 for more info watch this video:
 
 [Manage your dotfiles across multiple machines with GNU Stow and Git - YouTube](https://www.youtube.com/watch?v=90xMTKml9O0)
+
