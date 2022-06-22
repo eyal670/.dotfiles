@@ -54,7 +54,6 @@ bspc rule -a gnome-calculator state=floating sticky=on center=true
 bspc rule -a ranger state=floating center=true 
 bspc rule -a Bitwarden state=floating center=true 
 bspc rule -a pulse state=floating center=true 
-bspc rule -a Anydesk state=floating center=true 
 bspc rule -a bpytop state=floating rectangle=1400x800+0+0 center=true 
 bspc rule -a filezillaEdit state=floating rectangle=1800x1000+0+0 center=true 
 bspc rule -a gnome-calendar state=floating center=true 
@@ -66,3 +65,4 @@ bspc rule -a scratchpad sticky=on state=floating hidden=off
 #Send specific window to specific desktop
 bspc rule -a obsidian desktop='9' follow=on
 bspc rule -a Filezilla desktop='5' follow=on
+bspc rule -a Anydesk desktop='7' follow=on
