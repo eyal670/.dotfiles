@@ -474,3 +474,16 @@ tail = true
 interval = 3600 
 click-left = alacritty -e paru -Syyu && dunstify "updates complete"
 
+;; ------
+
+[module/list-orphans]
+type=custom/script
+exec =$HOME/.config/bspwm/polybar/scripts/list-orphans.sh 
+format = <label>
+format-prefix = " | :"
+format-prefix-foreground = ${color.background}
+format-foreground = ${color.background}
+format-background = ${color.blue}
+tail = true
+interval = 3600 
+click-left = alacritty -e $HOME/.config/bspwm/polybar/scripts/clean-orphens.sh 

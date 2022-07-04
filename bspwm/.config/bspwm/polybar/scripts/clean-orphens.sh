@@ -1,0 +1,3 @@
+#!/bin/sh
+echo clean orphan packages...
+paru -Rs $(paru -Qtdq) && dunstify "clean orphans complete"
