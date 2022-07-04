@@ -155,63 +155,6 @@ animation-charging-framerate = 750
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-[module/i3]
-type = internal/i3
-
-pin-workspaces = true
-strip-wsnumbers = true
-index-sort = true
-
-enable-click = true
-enable-scroll = true
-wrapping-scroll = false
-reverse-scroll = false
-
-fuzzy-match = true
-
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-5 = 6;
-ws-icon-6 = 7;漣
-format = <label-state><label-mode>
-format-background = ${color.altblack}
-
-label-mode = %mode%
-label-mode-padding = 1
-label-mode-background = ${color.altblack}
-label-mode-foreground = ${color.yellow}
-
-label-focused = %icon%
-label-focused-foreground = ${color.blue}
-label-focused-background = ${color.altblack}
-
-label-unfocused = %icon%
-label-unfocused-foreground = ${color.foreground}
-label-unfocused-background = ${color.altblack}
-
-label-visible = %icon%
-label-visible-foreground = ${color.green}
-label-visible-background = ${color.altblack}
-
-label-urgent = %icon%
-label-urgent-foreground = ${color.red}
-label-urgent-background = ${color.altblack}
-
-label-focused-padding = 1
-label-unfocused-padding = 1
-label-visible-padding = 1
-label-urgent-padding = 1
-
-;label-separator = |
-;label-separator-padding = 0
-;label-separator-foreground = ${color.foreground}
-;label-separator-background = ${color.altblack}
-
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
 [module/bspwm]
 type = internal/bspwm
 
