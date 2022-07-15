@@ -59,7 +59,7 @@ bspc rule -a filezillaEdit state=floating rectangle=1800x1000+0+0 center=true
 bspc rule -a gnome-calendar state=floating center=true 
 bspc rule -a TelegramDesktop state=floating rectangle=1400x800+0+0 center=true 
 bspc rule -a Zulip state=floating rectangle=1400x800+0+0 center=true 
-
+bspc rule -a 'Syncthing GTK' state=floating rectangle=1400x800+0+0 center=true 
 bspc rule -a scratchpad sticky=on state=floating hidden=off
 
 #Send specific window to specific desktop
