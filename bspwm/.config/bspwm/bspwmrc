@@ -64,6 +64,6 @@ bspc rule -a scratchpad sticky=on state=floating hidden=off
 
 #Send specific window to specific desktop
 bspc rule -a obsidian desktop='9' follow=on
-bspc rule -a Filezilla desktop='5' follow=on
+bspc rule -a FileZilla desktop='5' follow=on
 bspc rule -a Anydesk desktop='7' follow=on
 bspc rule -a Postman desktop='6' follow=on
