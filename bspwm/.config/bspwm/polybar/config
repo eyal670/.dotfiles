@@ -53,7 +53,7 @@ font-4 = "Hack Nerd Font:size=12;4"
 # Default
 modules-left = spacing BLD launcher pacman-updates aur-updates list-orphans BRD spacing ;dot GLD cpu YPL memory CPL filesystem CRD spacing ;dot MLD ip MRD ;wired-network ;network 
 modules-center = LD bspwm mod RD
-modules-right =  BLD trackingtime-today BRD spacing CLD prev-song cava next-song CRD spacing RLD battery RRD spacing ;dot GLD volume GRD ;YPL brightness ;YRD spacing ;dot BLD xkeyboard BRD spacing ;dot BLD time BRD spacing
+modules-right =  CLD prev-song cava next-song CRD spacing RLD battery RRD spacing ;dot GLD volume GRD ;YPL brightness ;YRD spacing ;dot BLD xkeyboard BRD spacing ;dot BLD trackingtime-today time BRD spacing
 
 spacing = 0
 dim-value = 1.0
