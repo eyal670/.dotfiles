@@ -487,3 +487,15 @@ format-background = ${color.blue}
 tail = true
 interval = 3600 
 click-left = alacritty -e $HOME/.config/bspwm/polybar/scripts/clean-orphens.sh 
+
+;; ------
+
+[module/trackingtime-today]
+type=custom/text
+content = 神 
+content-font = 5
+content-foreground= ${color.background}
+content-background = ${color.blue} 
+content-padding=0
+click-left = $HOME/.config/bspwm/polybar/scripts/trackingtime-today/main.py 
+
