@@ -22,7 +22,6 @@ load_dotenv()
 
 def get_entries(token,user_id,title):
     today = str(date.today())
-    today = '2022-08-03'
     url = "https://app.trackingtime.co/api/v4/events?filter=USER&id="+user_id+"&from="+today+"&to="+today
     payload={}
     headers = {
