@@ -429,7 +429,7 @@ click-right = ~/.config/spotifyd/scripts/song_notify/song_notify.py
 [module/next-song]
 type = custom/text
 content = "怜"
-content-font = 1
+content-font = 5
 content-background = ${color.cyan}
 content-foreground = ${color.background}
 content-padding = 0
@@ -440,7 +440,7 @@ click-left = playerctl --player=spotifyd next
 [module/prev-song]
 type = custom/text
 content = "玲"
-content-font = 1
+content-font = 5
 content-background = ${color.cyan}
 content-foreground = ${color.background}
 content-padding = 0
