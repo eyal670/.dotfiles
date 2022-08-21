@@ -21,7 +21,7 @@ configuration {
 @theme "~/.config/rofi/nord.rasi"
 
 window {
-    background-color: @background;
+    background-color: rgba(0,0,0,0);
     border:           0;
     padding:          30;
 }
