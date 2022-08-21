@@ -24,6 +24,9 @@ setxkbmap -option grp:alt_shift_toggle -layout us,il
 
 keybLayout=$(setxkbmap -v | awk -F "+" '/symbols/ {print $2}')
 
+#disable caps lock
+setxkbmap -option caps:none
+
 run sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
 greenclip daemon &
 
