@@ -91,6 +91,8 @@ def notify(data1,data2):
         "\n\ntotal "+ timeframe + "\ntotal hrs: " + format_hrs(total_hrs) + \
         "\ndecimal format: " + str(round(float(total_hrs),2)) 
     subp.run(["dunstify", "TrackingTime "+timeframe, data, '-r', '901'])
+    print("TrackingTime "+timeframe)
+    print(data)
 
 divine_data = get_entries(os.getenv('DIVINE_TOKEN'),os.getenv('DIVINE_USER'),'Divine')
 eyal_web_data = get_entries(os.getenv('EYALWEB_TOKEN'),os.getenv('EYALWEB_USER'),'Eyal Web')
