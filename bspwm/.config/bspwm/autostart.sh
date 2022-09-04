@@ -34,6 +34,7 @@ nitrogen --restore &
 xsetroot -cursor_name left_ptr &
 
 picom --config $HOME/.config/bspwm/picom.conf --vsync --experimental-backends &
+
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 #hide mouse when not moving - 'pacman -S unclutter'
@@ -45,3 +46,5 @@ if [ ! $(pgrep "xidlehook") ]; then
   notify-send "setting lock time"
   xidlehook --not-when-fullscreen --timer 900 'i3lock -t -i $HOME/Pictures/wallpapers/lockImage.png' '' &
 fi
+
+python3 $HOME/DevLab/Scripts/ron_bot/main.py &
