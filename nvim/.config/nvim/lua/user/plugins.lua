@@ -63,6 +63,7 @@ return packer.startup(function(use)
       run = ":TSUpdate"
   })
   use 'nvim-treesitter/nvim-treesitter-context'
+  use("ThePrimeagen/harpoon")
 
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
