@@ -79,7 +79,10 @@ local opts = {
 }
 
 local mappings = {
-  ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
+  ["a"] = { "<cmd>:lua require(\"harpoon.ui\").toggle_quick_menu()<cr>", "open harpoon" },
+  ["A"] = { "<cmd>:lua require(\"harpoon.mark\").add_file()<cr>", "add file to harpoon" },
+  ["k"] = { "<cmd>:lua require(\"harpoon.ui\").nav_prev()<cr>", "prev harpoon file" },
+  ["j"] = { "<cmd>:lua require(\"harpoon.ui\").nav_next()<cr>", "next harpoon file" },
   ["b"] = {
     "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
     "Buffers",
