@@ -83,6 +83,7 @@ local mappings = {
   ["A"] = { "<cmd>:lua require(\"harpoon.mark\").add_file()<cr>", "add file to harpoon" },
   ["k"] = { "<cmd>:lua require(\"harpoon.ui\").nav_prev()<cr>", "prev harpoon file" },
   ["j"] = { "<cmd>:lua require(\"harpoon.ui\").nav_next()<cr>", "next harpoon file" },
+  ["C"] = { "<cmd>!pwd | xclip -selection clipboard<cr>", "copy path to clipbord" },
   ["b"] = {
     "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
     "Buffers",
