@@ -33,7 +33,7 @@ greenclip daemon &
 nitrogen --restore &
 xsetroot -cursor_name left_ptr &
 
-picom --config $HOME/.config/bspwm/picom.conf --vsync --experimental-backends &
+picom --config $HOME/.config/bspwm/picom.conf --vsync &
 
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
