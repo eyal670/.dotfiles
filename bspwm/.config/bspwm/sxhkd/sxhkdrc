@@ -50,7 +50,7 @@ alt + p
 
 # open browser
 super + w
-    google-chrome-stable
+    firefox
 
 # kill browser
 super + shift + w
