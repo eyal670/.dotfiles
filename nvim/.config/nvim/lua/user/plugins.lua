@@ -61,6 +61,7 @@ return packer.startup(function(use)
   use "folke/which-key.nvim"
   use "mattn/emmet-vim"
   use "ThePrimeagen/harpoon"
+  use "folke/trouble.nvim"
 
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
@@ -81,9 +82,17 @@ return packer.startup(function(use)
 
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
-  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
-  use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
+  use "williamboman/mason.nvim"
+  use "williamboman/mason-lspconfig.nvim"
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+  use "ray-x/lsp_signature.nvim"
+  use "SmiteshP/nvim-navic"
+  use "simrat39/symbols-outline.nvim"
+  use "b0o/SchemaStore.nvim"
+  use "RRethy/vim-illuminate"
+  use "j-hui/fidget.nvim"
+  use "lvimuser/lsp-inlayhints.nvim"
+  use "https://git.sr.ht/~whynothugo/lsp_lines.nvim"
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
