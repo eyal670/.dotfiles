@@ -12,7 +12,6 @@ local servers = {
   "intelephense",
   "cssls",
   "cssmodules_ls",
-  "emmet_ls",
   "html",
   "jsonls",
   "sumneko_lua",
