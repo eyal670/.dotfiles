@@ -54,7 +54,7 @@ super + w
 
 # kill browser
 super + shift + w
-    pkill chrome
+    pkill firefox
 
 
 # take a screenshot
