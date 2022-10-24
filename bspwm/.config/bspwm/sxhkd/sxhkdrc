@@ -341,7 +341,7 @@ ctrl + grave ; {grave,1,Tab,c}
 
 # launch an AppImage
 ctrl + grave ; a
-    $HOME/AppImages/$(ls $HOME/AppImages | rofi -dmenu)
+    $HOME/AppImages/$(ls $HOME/AppImages | rofi -i -dmenu)
 
 # spt - {open,play/pause}
 ctrl + grave ; s ; {o,p}
