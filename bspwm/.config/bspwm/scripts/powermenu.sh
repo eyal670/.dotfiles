@@ -7,6 +7,6 @@ case "$chosen" in
 	"  Restart") reboot ;;
 	"  Lock") i3lock -t -i $HOME/Pictures/wallpapers/lockImage.png  ;;
 	"  Logout") kill -9 -1  ;;
-	"直 Networks") alacritty --class alacritty,scratchTerm -e "nmtui" ;;
+	"直 Networks") alacritty --class scratchTerm,scratchTerm -e "nmtui" ;;
 	*) exit 1 ;;
 esac
