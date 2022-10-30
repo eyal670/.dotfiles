@@ -49,8 +49,8 @@ alt + p
 # Application Keybindings
 
 # open browser
-super + w
-    firefox
+super + w ; {e,d}
+    firefox -P {eyal670,Divine} 
 
 # kill browser
 super + shift + w
