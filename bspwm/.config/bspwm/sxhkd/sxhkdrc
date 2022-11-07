@@ -356,7 +356,7 @@ super + shift +x
   i3lock -t -i $HOME/Pictures/wallpapers/lockImage.png 
 
 # list keybinding
-super + shift + slash
+super + shift + ctrl + slash
   ~/.config/bspwm/scripts/sxhkd-help.sh
 
 # cycle thrue desktops on all monitors connected
