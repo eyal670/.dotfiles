@@ -24,4 +24,4 @@ if [ -z "${query}" ];then
     seperator=''
 fi
 query=`echo $query | tr ' ' '+'`
-tmux neww bash -c "curl -s cht.sh/$selected$seperator$query | less -R"
+curl -s cht.sh/$selected$seperator$query | less -R
