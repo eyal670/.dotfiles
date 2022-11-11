@@ -23,5 +23,16 @@ fi
 if [ -z "${query}" ];then
     seperator=''
 fi
+# replace spaces with +
 query=`echo $query | tr ' ' '+'`
-curl -s cht.sh/$selected$seperator$query | less -R
+
+# check for tmux arg
+option="${1}" 
+case ${option} in 
+   tmux) #if tmux open in new window 
+        tmux neww bash -c "curl -s cht.sh/$selected$seperator$query | less -R" 
+      ;; 
+   *) #else run outside of tmux 
+        curl -s cht.sh/$selected$seperator$query | less -R
+      ;; 
+esac
