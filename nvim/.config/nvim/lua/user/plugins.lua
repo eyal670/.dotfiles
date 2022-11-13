@@ -62,6 +62,7 @@ return packer.startup(function(use)
   use "mattn/emmet-vim"
   use "ThePrimeagen/harpoon"
   use "folke/trouble.nvim"
+  use "ggandor/leap.nvim"
 
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
