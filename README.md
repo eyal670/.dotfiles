@@ -20,6 +20,10 @@ Just my Linux .dotfiles repository
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
     ```
     and from  within tmux do `ctrl-a + I` key binding
+* to install wordpress php stubs for intelephense run:
+    ```bash
+    composer global require php-stubs/wordpress-globals php-stubs/wordpress-stubs php-stubs/woocommerce-stubs php-stubs/acf-pro-stubs wpsyntex/polylang-stubs php-stubs/genesis-stubs php-stubs/wp-cli-stubs arifpavel/elementor-stubs
+    ```
 
 ### more info about using GNU Stow
 
@@ -34,7 +38,7 @@ inside the .dotfiles folder it will be:
 
 `~/.dotfiles/alacritty/.config/alacritty`
 
-than delete the orig file and got to `/home/eyal/.dotfiles` folder and run the command: `stow */`
+than delete the orig file and go to `/home/eyal/.dotfiles` folder and run the command: `stow */`
 
 this go inside each sub folder inside `.dotfiles` folder and will mirror the path all the way down to the last file in the $HOME directory (one directory above the place where the stow command is runnig) as symbolic links.
 
