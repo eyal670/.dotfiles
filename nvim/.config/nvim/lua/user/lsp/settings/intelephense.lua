@@ -9,6 +9,7 @@ return {
                 "curl",
                 "date",
                 "dom",
+                "elementor-stubs",
                 "fileinfo",
                 "filter",
                 "gd",
@@ -49,11 +50,11 @@ return {
                 "woocommerce-stubs",
                 "acf-pro-stubs",
                 "wordpress-globals",
-                "polylang-stubs"
+                "polylang-stubs",
             },
             environment = {
                 --[[ use only absolute paths, no ~ or $HOME ]]
-              includePaths = {'/home/eyal/.config/composer/vendor/php-stubs', '/home/eyal/.config/composer/vendor/wpsyntex'}
+              includePaths = {'/home/eyal/.config/composer/vendor/php-stubs', '/home/eyal/.config/composer/vendor/wpsyntex','/home/eyal/.config/composer/vendor/arifpavel'}
             },
             files = {
                 maxSize = 5000000;
