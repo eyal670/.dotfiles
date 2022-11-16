@@ -20,6 +20,10 @@ Just my Linux .dotfiles repository
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
     ```
     and from  within tmux do `ctrl-a + I` key binding
+* to install wordpress php stubs for intelephense run:
+    ```bash
+    composer global require php-stubs/wordpress-globals php-stubs/wordpress-stubs php-stubs/woocommerce-stubs php-stubs/acf-pro-stubs wpsyntex/polylang-stubs php-stubs/genesis-stubs php-stubs/wp-cli-stubs arifpavel/elementor-stubs
+    ```
 
 ### more info about using GNU Stow
 
