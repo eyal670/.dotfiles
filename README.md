@@ -34,7 +34,7 @@ inside the .dotfiles folder it will be:
 
 `~/.dotfiles/alacritty/.config/alacritty`
 
-than delete the orig file and got to `/home/eyal/.dotfiles` folder and run the command: `stow */`
+than delete the orig file and go to `/home/eyal/.dotfiles` folder and run the command: `stow */`
 
 this go inside each sub folder inside `.dotfiles` folder and will mirror the path all the way down to the last file in the $HOME directory (one directory above the place where the stow command is runnig) as symbolic links.
 
