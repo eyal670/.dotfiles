@@ -25,11 +25,15 @@ super + r
 
 # open Alacritty in scratchpad
 super + m
-    $HOME/.config/bspwm/scripts/bspwm-toggle-visibility.sh scratchTerm "alacritty --class alacritty,scratchTerm"
+    $HOME/.config/bspwm/scripts/bspwm-toggle-visibility.sh alacritty "alacritty --class scratchTerm,alacritty"
 
 # open Ranger File Manager in scratchpad
 super + shift + n
     $HOME/.config/bspwm/scripts/bspwm-toggle-visibility.sh ranger "alacritty --class ranger,ranger -e ranger"
+
+# open nvim with temp html/css/js files
+super + t
+   $HOME/.config/bspwm/scripts/bspwm-toggle-visibility.sh ntemp "alacritty --class scratchTerm,ntemp -e zsh -ic ntemp"
 
 # open bitwarder
 super + shift + v
@@ -375,6 +379,3 @@ super + {grave,Tab}
 super + shift + ctrl + x
     xkill
 
-# open nvim with temp html/css/js files
-super + t
-   $HOME/.config/bspwm/scripts/bspwm-toggle-visibility.sh scratchTerm "alacritty --class alacritty,scratchTerm -e zsh -ic ntemp"
