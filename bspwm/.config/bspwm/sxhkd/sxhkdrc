@@ -377,4 +377,4 @@ super + shift + ctrl + x
 
 # open nvim with temp html/css/js files
 super + t
-   alacritty -e zsh -ic 'ntemp' 
+   $HOME/.config/bspwm/scripts/bspwm-toggle-visibility.sh scratchTerm "alacritty --class alacritty,scratchTerm -e zsh -ic ntemp"
