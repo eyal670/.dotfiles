@@ -374,3 +374,7 @@ super + {grave,Tab}
 # kill any window
 super + shift + ctrl + x
     xkill
+
+# open nvim with temp html/css/js files
+super + t
+   alacritty -e zsh -ic 'ntemp' 
