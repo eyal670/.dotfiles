@@ -63,22 +63,12 @@ return packer.startup(function(use)
   use "ThePrimeagen/harpoon"
   use "folke/trouble.nvim"
   use "ggandor/leap.nvim"
-  use {
-        -- need code-minimap from the AUR
-      'wfxr/minimap.vim',
-      run = "cargo install --locked code-minimap",
-      -- cmd = {"Minimap", "MinimapClose", "MinimapToggle", "MinimapRefresh", "MinimapUpdateHighlight"},
-      config = function ()
-        vim.cmd ("let g:minimap_width = 10")
-        vim.cmd ("let g:minimap_auto_start = 1")
-        vim.cmd ("let g:minimap_auto_start_win_enter = 1")
-      end,
-    }
 
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
   use 'folke/tokyonight.nvim'
+  use 'LunarVim/lunar.nvim'
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
