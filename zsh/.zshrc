@@ -27,6 +27,9 @@ _comp_options+=(globdots)		# Include hidden files.
 bindkey -v
 export KEYTIMEOUT=1
 
+# add zoxide cd command
+eval "$(zoxide init zsh)"
+
 # Use vim keys in tab complete menu:
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
@@ -74,6 +77,9 @@ bindkey '^e' edit-command-line
 # Load aliases and shortcuts if existent.
 [ -f "$HOME/.config/shortcutrc" ] && source "$HOME/.config/shortcutrc"
 [ -f "$HOME/.zsh_aliases" ] && source "$HOME/.zsh_aliases"
+
+# update $PATH
+export PATH="/home/eyal/.local/bin/:$PATH"
 
 # Load zsh-syntax-highlighting; should be last.
 # install with: "sudo pacman -S zsh-syntax-highlighting" or get the plugin with: git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
