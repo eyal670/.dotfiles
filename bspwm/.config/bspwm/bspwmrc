@@ -61,6 +61,7 @@ bspc rule -a TelegramDesktop state=floating rectangle=1400x800+0+0 center=true
 bspc rule -a Zulip state=floating rectangle=1400x800+0+0 center=true 
 bspc rule -a 'Syncthing GTK' state=floating rectangle=1400x800+0+0 center=true 
 bspc rule -a scratchpad sticky=on state=floating hidden=off
+bspc rule -a discord state=floating sticky=on rectangle=1800x1000+0+0 center=true
 
 #Send specific window to specific desktop
 bspc rule -a obsidian desktop='9' follow=on
