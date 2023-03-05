@@ -100,6 +100,7 @@ local mappings = {
   },
   ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
   ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
+  ["S"] = { "<cmd>!sass ${pwd}style.scss ${pwd}style.css --style compressed && dunstify \"style.scss compile done\"<cr>", "compile style.scss in main directory" },
 
   p = {
     name = "Packer",
