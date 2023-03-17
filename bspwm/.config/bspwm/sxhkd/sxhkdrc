@@ -17,7 +17,8 @@ super + shift + p
 
 # open ranger file manager
 super + r
-   alacritty -e "ranger"
+   systemctl --user restart spotifyd
+   # alacritty -e "ranger"
 
 #################
 ## Scratchpads ##
