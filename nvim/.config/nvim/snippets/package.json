@@ -15,6 +15,10 @@
         "path": "./css.json"
       },
       {
+        "language": "scss",
+        "path": "./css.json"
+      },
+      {
         "language": "javascript",
         "path": "./javascript.json"
       },
