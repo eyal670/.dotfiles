@@ -54,8 +54,8 @@ def get_entries(token,user_id,title):
     tasks = json.loads(response.text)
     total = 0;
     for task in tasks['data']:
-        # print(task['duration'])
-        total += task['duration']
+        # print(task['d'])
+        total += task['d']
 
     total_hrs = round((total/3600),2)
     data = {
