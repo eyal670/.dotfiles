@@ -25,13 +25,14 @@ parser = argparse.ArgumentParser()
 parser.add_argument("-tf", "--timeframe", type=str, default="today", help="options: today, month, set")
 parser.add_argument("-sd", "--startdate", help="date object: 2022-08-01")
 parser.add_argument("-ed", "--enddate", help="date object: 2022-08-31")
+parser.add_argument("-c", "--client", type=str, help="tracking time client id")
 
 args = parser.parse_args()
 
 # loading .env variables
 load_dotenv()
 
-def get_entries(token,user_id,title):
+def get_entries(token,user_id,title,filter='USER'):
     today = date.today()
     timeframe = args.timeframe 
     if(timeframe == 'month'):
@@ -44,7 +45,7 @@ def get_entries(token,user_id,title):
     else:
         start_date = today
         end_date = today
-    url = "https://app.trackingtime.co/api/v4/events?filter=USER&id="+user_id+"&from="+str(start_date)+"&to="+str(end_date)
+    url = "https://app.trackingtime.co/api/v4/events/min?filter="+filter+"&id="+user_id+"&from="+str(start_date)+"&to="+str(end_date)
     payload={}
     headers = {
       'Authorization': 'Basic '+token,
@@ -78,22 +79,31 @@ def format_hrs(hrs):
     format_hrs = str(total_hr_part)+':'+format_total_min_part
     return format_hrs
 
-def notify(data1,data2):
+def notify(data1,data2 = False):
     if(args.timeframe == 'set'):
         timeframe = 'manually '+args.startdate+" - "+args.enddate
     else:
         timeframe = args.timeframe
-    total_hrs = str(data1['raw_hrs'] + data2['raw_hrs'])
-    data = "\nfor " + data1['title'] + "\ntotal hrs: " + data1['total_hrs'] + \
-        "\ndecimal format: " + data1['decimal_hrs'] + \
-        "\n\nfor " + data2['title'] + "\ntotal hrs: " + data2['total_hrs'] + \
-        "\ndecimal format: " + data2['decimal_hrs'] + \
-        "\n\ntotal "+ timeframe + "\ntotal hrs: " + format_hrs(total_hrs) + \
-        "\ndecimal format: " + str(round(float(total_hrs),2)) 
+    if(data2):
+        total_hrs = str(data1['raw_hrs'] + data2['raw_hrs'])
+        data = "\nfor " + data1['title'] + "\ntotal hrs: " + data1['total_hrs'] + \
+            "\ndecimal format: " + data1['decimal_hrs'] + \
+            "\n\nfor " + data2['title'] + "\ntotal hrs: " + data2['total_hrs'] + \
+            "\ndecimal format: " + data2['decimal_hrs'] + \
+            "\n\ntotal "+ timeframe + "\ntotal hrs: " + format_hrs(total_hrs) + \
+            "\ndecimal format: " + str(round(float(total_hrs),2)) 
+    else:
+        total_hrs = str(data1['raw_hrs'])
+        data = "\nclient: " + data1['title'] + "\ntotal hrs: " + data1['total_hrs'] + \
+            "\ndecimal format: " + data1['decimal_hrs'] 
     subp.run(["dunstify", "TrackingTime "+timeframe, data, '-r', '901'])
     print("TrackingTime "+timeframe)
     print(data)
 
-divine_data = get_entries(os.getenv('DIVINE_TOKEN'),os.getenv('DIVINE_USER'),'Divine')
-eyal_web_data = get_entries(os.getenv('EYALWEB_TOKEN'),os.getenv('EYALWEB_USER'),'Eyal Web')
-notify(divine_data,eyal_web_data)
+if(args.client):
+    eyal_web_data = get_entries(os.getenv('EYALWEB_TOKEN'),args.client,'Gal Yamin','CUSTOMER')
+    notify(eyal_web_data)
+else:
+    divine_data = get_entries(os.getenv('DIVINE_TOKEN'),os.getenv('DIVINE_USER'),'Divine')
+    eyal_web_data = get_entries(os.getenv('EYALWEB_TOKEN'),os.getenv('EYALWEB_USER'),'Eyal Web')
+    notify(divine_data,eyal_web_data)
