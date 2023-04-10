@@ -14,7 +14,7 @@ local servers = {
   "cssmodules_ls",
   "html",
   "jsonls",
-  "sumneko_lua",
+  "lua_ls",
   "pyright",
   "bashls",
   "clangd",
