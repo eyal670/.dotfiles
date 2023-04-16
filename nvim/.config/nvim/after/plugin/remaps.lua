@@ -26,3 +26,7 @@ vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = 'copy CurPos to eol to sys cl
 vim.keymap.set({"n", "v"}, "<leader>d", [["_d]], { desc = 'delete without overwrite clipboard' })
 
 vim.keymap.set('n', '<leader>z',vim.cmd.ZenMode , { desc = 'toggle zen mode' })
+
+-- copy path to clipboard
+vim.keymap.set('n', '<leader>Cc',"<cmd>!pwd | tr -d \"\\n\" | xclip -selection clipboard | dunstify \"path copy to clipboard\"<cr>" , { desc = 'copy project path to clipboard' })
+vim.keymap.set('n', '<leader>Cf',"<cmd>:let @+ = expand('%:p') | !dunstify \"full file path copy to clipboard\"<cr>" , { desc = 'copy file path to clipboard' })
