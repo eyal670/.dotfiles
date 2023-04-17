@@ -1,11 +1,11 @@
 vim.keymap.set('n', '<leader>h',vim.cmd.nohlsearch , { desc = 'No Highlight' })
 
 -- move selected lines up and down
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = 'No Highlight' })
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = 'No Highlight' })
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = 'move selected line down' })
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = 'move selected line up' })
 
-vim.keymap.set("v", "<", "<gv", { desc = 'No Highlight' })
-vim.keymap.set("v", ">", ">gv", { desc = 'No Highlight' })
+vim.keymap.set("v", "<", "<gv", { desc = 'indent in' })
+vim.keymap.set("v", ">", ">gv", { desc = 'indent out' })
 
 
 vim.keymap.set("n", "J", "mzJ`z", { desc = 'append next line to current line' })
