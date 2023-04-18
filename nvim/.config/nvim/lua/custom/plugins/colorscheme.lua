@@ -1,3 +1,4 @@
 return {
-  "lunarvim/lunar.nvim"
+  "lunarvim/lunar.nvim",
+  { "catppuccin/nvim", name = "catppuccin" }
 }
