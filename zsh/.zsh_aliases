@@ -8,5 +8,5 @@ alias fcd='cd $(find $HOME/DevLab/ -type d 2>&1 | grep -v "Permission denied" | 
 alias zcd='cd $(zoxide query -l | fzf)'
 alias tcd='sh ~/.scripts/t.sh'
 alias cht='sh ~/.scripts/cheat.sh'
-alias ntemp='nvim ~/DevLab/temp/temp.css ~/DevLab/temp/temp.js ~/DevLab/temp/temp.php ~/DevLab/temp/temp.txt ~/DevLab/temp/temp.html' 
+alias ntemp='nvim ~/DevLab/temp/' 
 alias nvim_php='nvim ${PWD##*/}.php' 

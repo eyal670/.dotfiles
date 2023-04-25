@@ -472,7 +472,7 @@ format-foreground = ${color.background}
 format-background = ${color.blue}
 tail = true
 interval = 3600 
-click-left = alacritty -e paru -Syyu && dunstify "updates complete"
+click-left = alacritty -e paru -Syyu --batchinstall && dunstify "updates complete"
 
 ;; ------
 

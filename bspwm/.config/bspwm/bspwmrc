@@ -44,6 +44,8 @@ bspc config presel_feedback_color	"#ff9e64"
 bspc monitor HDMI-1 -d 1 2 3 4 5 6 7 8 9 10 
 bspc monitor eDP-1 -d 11 12 13 14 15 16 17 18 19 20
 
+#Apps Rules
+#find out the class name with 'xprop'
 bspc rule -a Oblogout state=floating
 bspc rule -a gimp state=floating center=true
 #Scratchpads
@@ -61,10 +63,12 @@ bspc rule -a TelegramDesktop state=floating rectangle=1400x800+0+0 center=true
 bspc rule -a Zulip state=floating rectangle=1400x800+0+0 center=true 
 bspc rule -a 'Syncthing GTK' state=floating rectangle=1400x800+0+0 center=true 
 bspc rule -a scratchpad sticky=on state=floating hidden=off
+bspc rule -a discord state=floating sticky=on rectangle=1800x1000+0+0 center=true
 
 #Send specific window to specific desktop
 bspc rule -a obsidian desktop='9' follow=on
 bspc rule -a FileZilla desktop='5' follow=on
 bspc rule -a Anydesk desktop='7' follow=on
+bspc rule -a Rustdesk desktop='7' follow=on
 bspc rule -a Postman desktop='6' follow=on
 bspc rule -a Local desktop='15' follow=on
