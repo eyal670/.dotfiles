@@ -21,7 +21,7 @@
 		"prefix": "s.WordPress plughin header - Divine",
 		"body": [
 			"/*",
-			"Plugin Name: ${1:plugin name}",
+			"Plugin Name: ${1:$TM_FILENAME_BASE}",
 			"Description: ${2:plugin description}",
 			"Author: Divine Sites",
 			"Developer: Eyal Ron",
@@ -39,7 +39,7 @@
 		"prefix": "s.WordPress plughin header - ER-Web",
 		"body": [
 			"/*",
-			"Plugin Name: ${1:plugin name}",
+			"Plugin Name: ${1:$TM_FILENAME_BASE}",
 			"Description: ${2:plugin description}",
 			"Author: ${3:ER-Web-Development}",
 			"Developer: Eyal Ron",
