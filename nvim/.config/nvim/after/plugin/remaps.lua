@@ -14,7 +14,8 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = 'scroll half page up' })
 vim.keymap.set("n", "n", "nzzzv", { desc = 'next search result' })
 vim.keymap.set("n", "N", "Nzzzv", { desc = 'prev search result' })
 
-vim.keymap.set('n', '<leader>c', vim.cmd.close, { desc = 'close window' })
+-- vim.keymap.set('n', '<leader>c', vim.cmd.close, { desc = 'close window' })
+vim.keymap.set('n', '<leader>c', vim.cmd.bdelete, { desc = 'close buffer' })
 
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]], { desc = 'past without overwrite clipboard' })
