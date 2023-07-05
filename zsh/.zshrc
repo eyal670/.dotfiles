@@ -70,6 +70,12 @@ lfcd () {
 }
 bindkey -s '^o' 'lfcd\n'
 
+function zipfolder {
+    FOLDER=$1
+    ZIPFILE=$1
+    zip -r "$ZIPFILE.zip" "$FOLDER" -x '*.git*'
+}
+
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
