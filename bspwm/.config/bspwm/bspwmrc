@@ -53,6 +53,7 @@ bspc rule -a term state=floating center=true
 bspc rule -a sptScratch state=floating center=true 
 bspc rule -a scratchTerm state=floating sticky=on rectangle=1800x1000+0+0 center=true
 bspc rule -a gnome-calculator state=floating sticky=on center=true
+bspc rule -a calcure state=floating sticky=on rectangle=1400x800+0+0 center=true
 bspc rule -a ranger state=floating center=true 
 bspc rule -a Bitwarden state=floating center=true 
 bspc rule -a pulse state=floating center=true 
