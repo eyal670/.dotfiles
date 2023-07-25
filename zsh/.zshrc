@@ -70,6 +70,7 @@ lfcd () {
 }
 bindkey -s '^o' 'lfcd\n'
 
+# zip a folder excluding the .git folder
 function zipfolder {
     FOLDER=$1
     ZIPFILE=$1
