@@ -24,6 +24,10 @@ echo "
 [general]
 bars = 10
 
+[input]
+method = pulse
+source = auto
+
 [output]
 method = raw
 raw_target = $pipe
