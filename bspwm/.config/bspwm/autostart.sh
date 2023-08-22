@@ -12,6 +12,8 @@ monitor=$(xrandr | grep " connected " | grep -e "HDMI" | awk '{ print$1 }')
 if [ $monitor ]; then
     xrandr --output $monitor --primary
     notify-send "autostart.sh:" "set monitor $monitor as primary"
+    # /home/eyal/.screenlayout/laptop-right.sh
+    # notify-send "autostart.sh:" "set laptop position to right"
 else
     xrandr --output eDP-1 --primary
     notify-send "autostart.sh:" "set monitor eDP-1 as primary"
