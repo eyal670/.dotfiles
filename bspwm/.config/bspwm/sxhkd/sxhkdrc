@@ -57,6 +57,10 @@ alt + p
 super + w ; {e,d}
     firefox -P {eyal670,Divine} 
 
+# open wget download manager menu
+super + w ; {g}
+    $HOME/.dotfiles/bspwm/.config/bspwm/scripts/wgetdm.sh
+
 # kill browser
 super + shift + w
     pkill firefox
