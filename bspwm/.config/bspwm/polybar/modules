@@ -503,11 +503,11 @@ click-right = $HOME/.config/bspwm/polybar/scripts/trackingtime-today/trackingtim
 ;; ------
 
 [module/toggle_screen_timer]
-type=custom/text
-content = ""
-content-font = 5
-content-foreground= ${color.background}
-content-background = ${color.blue} 
-content-padding=0
+type=custom/script
+exec = $HOME/.config/bspwm/polybar/scripts/screen-timeout-status.sh &
+interval = 5
+format = <label>
+format-foreground = ${color.background}
+format-background = ${color.blue}
+format-padding=0
 click-left = $HOME/.config/bspwm/polybar/scripts/toggle-screen-timeout.sh &
-click-right = dunstify 'DPMS Status: '$(xset q | grep "DPMS is" | awk '{print $3}') &
