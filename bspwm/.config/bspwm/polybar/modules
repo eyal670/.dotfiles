@@ -500,3 +500,14 @@ content-padding=0
 click-left = $HOME/.config/bspwm/polybar/scripts/trackingtime-today/main.py 
 click-right = $HOME/.config/bspwm/polybar/scripts/trackingtime-today/trackingtime-menu.sh 
 
+;; ------
+
+[module/toggle_screen_timer]
+type=custom/text
+content = ""
+content-font = 5
+content-foreground= ${color.background}
+content-background = ${color.blue} 
+content-padding=0
+click-left = $HOME/.config/bspwm/polybar/scripts/toggle-screen-timeout.sh &
+click-right = dunstify 'DPMS Status: '$(xset q | grep "DPMS is" | awk '{print $3}') &
