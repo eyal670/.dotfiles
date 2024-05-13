@@ -77,6 +77,15 @@ function zipfolder {
     zip -r "$ZIPFILE.zip" "$FOLDER" -x '*.git*'
 }
 
+# send ntfy to flip5
+function ntfy-flip5(){
+    curl -d "$1" ntfy.sh/flip5-NV5YQkJ5C8X
+}
+# send ntfy to all
+function ntfy-all(){
+    curl -d "$1" ntfy.sh/all-x2UausHp1irL
+}
+
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
