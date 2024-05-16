@@ -421,7 +421,7 @@ format-font = 5
 format-background =${color.cyan}
 format-foreground = ${color.background}
 label = " %output% "
-click-left = playerctl --player=spotifyd play-pause
+click-left = playerctl --player=spotify_player play-pause
 click-right = ~/.config/spotifyd/scripts/song_notify/song_notify.py
 
 ;; ------
@@ -433,7 +433,7 @@ content-font = 5
 content-background = ${color.cyan}
 content-foreground = ${color.background}
 content-padding = 0
-click-left = playerctl --player=spotifyd next
+click-left = playerctl --player=spotify_player next
 
 ;; ------
 
@@ -444,7 +444,7 @@ content-font = 5
 content-background = ${color.cyan}
 content-foreground = ${color.background}
 content-padding = 0
-click-left = playerctl --player=spotifyd previous
+click-left = playerctl --player=spotify_player previous
 
 ;; ------
 
