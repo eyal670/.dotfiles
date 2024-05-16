@@ -1,5 +1,5 @@
 theme = "dracula"
-client_id = "65b708073fc0480ea92a077233ca87bd"
+client_id = "ff8fb698930a441db8f153cdf9d514b9"
 client_port = 8080
 playback_format = """
 {track} • {artists}
@@ -19,7 +19,7 @@ playback_window_width = 6
 enable_media_control = true
 enable_streaming = "Always"
 enable_cover_image_cache = true
-default_device = "spotify-player"
+default_device = "idea320-spotify-player"
 
 [copy_command]
 command = "xclip"
@@ -29,9 +29,9 @@ args = [
 ]
 
 [device]
-name = "spotify-player"
+name = "idea320-spotify-player"
 device_type = "speaker"
-volume = 70
+volume = 100
 bitrate = 320
 audio_cache = false
 normalization = false
