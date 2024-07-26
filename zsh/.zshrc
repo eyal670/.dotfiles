@@ -97,6 +97,9 @@ bindkey '^e' edit-command-line
 # update $PATH
 export PATH="/home/eyal/.local/bin/:$PATH"
 
+# add go bins to path
+export PATH="$PATH:$HOME/go/bin/"
+
 # Load zsh-syntax-highlighting; should be last.
 # install with: "sudo pacman -S zsh-syntax-highlighting" or get the plugin with: git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
