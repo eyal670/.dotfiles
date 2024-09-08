@@ -340,9 +340,9 @@ super + button{4,5}
 super + shift + Return 
   alacritty -e tmux a
 
-# terminal emulator - just alacritty 
+# date and time in Israel
 super + shift + t
-  alacritty
+ dunstify --timeout=5000 "Time in ISRAEL:" "$(TZ=":Asia/Jerusalem" date "+%H:%M %d-%m-%Y")"; dunstify --timeout=5000 "Time in ALASKA:" "$(TZ=":America/Anchorage" date "+%H:%M %d-%m-%Y")"
 
 # rofi - grave=~ {clipboard, drun, windows,calculator}
 ctrl + grave ; {grave,1,Tab,c} 
