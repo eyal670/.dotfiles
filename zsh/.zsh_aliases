@@ -14,3 +14,4 @@ alias nvim_php='nvim ${PWD##*/}.php'
 alias timestamp="date +%s | xclip -selection clipboard && notify-send \"timestamp copy to clipbaord\""
 alias zipf='zipfolder'
 alias sp='spotify_player'
+alias ssh='TERM=xterm-256color ssh'
