@@ -72,7 +72,7 @@ format-muted-prefix-font = 2
 format-muted-prefix-foreground = ${color.background}
 format-muted-prefix-background = ${color.green}
 
-label-volume = "%percentage%% "
+label-volume = "%percentage%% | %{A1:pavucontrol:}%{A}"
 label-muted = "Mute"
 
 label-volume-background = ${color.green}
