@@ -352,6 +352,10 @@ ctrl + grave ; {grave,1,Tab,c}
 ctrl + grave ; a
     $HOME/AppImages/$(ls $HOME/AppImages | rofi -i -dmenu)
 
+# launch bookmarks selector
+ctrl + grave ; b
+    xdotool type $(grep -v '^#' ~/.config/bookmarks/bookmarks | rofi -dmenu -p "bookmarks:" -i -markup-rows -no-show-icons -theme-str 'window \{ fullscreen: true; \} listview\{ columns: 4;\}' | cut -d ' ' -f1)
+
 # spt - {open,play/pause}
 ctrl + grave ; s ; {o,p}
   {alacritty --class sptScratch\,sptScratch -e spt, spt playback -t}
