@@ -15,3 +15,4 @@ alias timestamp="date +%s | xclip -selection clipboard && notify-send \"timestam
 alias zipf='zipfolder'
 alias sp='spotify_player'
 alias ssh='TERM=xterm-256color ssh'
+alias clc='fc -nl -1 | xclip -selection clipboard && echo "command copied to clipboard: $(fc -nl -1)"'
