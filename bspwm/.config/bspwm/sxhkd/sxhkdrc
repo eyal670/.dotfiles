@@ -356,6 +356,10 @@ ctrl + grave ; a
 ctrl + grave ; b
     xdotool type $(grep -v '^#' ~/.config/bookmarks/bookmarks | rofi -dmenu -p "bookmarks:" -i -markup-rows -no-show-icons -theme-str 'window \{ fullscreen: true; \} listview\{ columns: 4;\}' | cut -d ' ' -f1)
 
+# add bookmark to bookmarks file
+super + shift + b
+	~/.config/bookmarks/scripts/addbookmark.sh
+
 # spt - {open,play/pause}
 ctrl + grave ; s ; {o,p}
   {alacritty --class sptScratch\,sptScratch -e spt, spt playback -t}
