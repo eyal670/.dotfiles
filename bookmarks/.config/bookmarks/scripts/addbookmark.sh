@@ -3,7 +3,7 @@
 bookmark="$(xclip -o)"
 file="$HOME/.local/share/bookmarks/bookmarks"
 
-if grep -q "^$bookmark$" "$file"; then
+if grep "$bookmark$" "$file"; then
     notify-send "Oops" "bookmark already exists"
 else
     echo "$bookmark" >> "$file"
