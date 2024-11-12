@@ -362,7 +362,7 @@ super + shift + b
 
 # edit bookmarks file
 super + ctrl + b
-	alacritty --class scratchTerm\,bookmarks -e nvim ~/.local/share/bookmarks/bookmarks
+	alacritty --class scratchTerm\,bookmarks -e sh -c 'cd ~/.local/share/bookmarks && nvim bookmarks'
 
 # spt - {open,play/pause}
 ctrl + grave ; s ; {o,p}
