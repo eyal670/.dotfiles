@@ -354,7 +354,7 @@ ctrl + grave ; a
 
 # launch bookmarks selector
 ctrl + grave ; b
-    xdotool type $(grep -v '^#' ~/.local/share/bookmarks/bookmarks | rofi -dmenu -p "bookmarks:" -i -markup-rows -no-show-icons -theme-str 'window \{ fullscreen: true; \} listview\{ columns: 4;\}' | cut -d ' ' -f1)
+    xdotool type $(grep -v '^#' ~/.local/share/bookmarks/bookmarks | rofi -dmenu -p "bookmarks:" -i -no-show-icons -theme-str 'window \{ fullscreen: true; \} listview\{ columns: 4;\}' | cut -d ' ' -f1)
 
 # add bookmark to bookmarks file
 super + shift + b
