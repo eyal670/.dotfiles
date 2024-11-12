@@ -1,7 +1,7 @@
 #!/bin/sh
 
 bookmark="$(xclip -o)"
-file="$HOME/.config/bookmarks/bookmarks"
+file="$HOME/.local/share/bookmarks/bookmarks"
 
 if grep -q "^$bookmark$" "$file"; then
     notify-send "Oops" "bookmark already exists"
