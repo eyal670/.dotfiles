@@ -354,7 +354,7 @@ ctrl + grave ; a
 
 # launch bookmarks selector
 ctrl + grave ; b
-    xdotool type $(grep -v '^#' ~/.local/share/bookmarks/bookmarks | rofi -dmenu -p "bookmarks:" -i -no-show-icons -theme-str 'window \{ fullscreen: true; \} listview\{ columns: 4;\}' | cut -d ' ' -f1)
+	xdotool type $(grep -v '^#' ~/.local/share/bookmarks/bookmarks | column -t -s $'#' | rofi -dmenu -p "bookmarks:" -i -no-show-icons -theme-str 'window \{ fullscreen: true; \} listview\{ columns: 4;\}' | awk '\{print $NF\}')
 
 # add bookmark to bookmarks file
 super + shift + b
@@ -362,7 +362,7 @@ super + shift + b
 
 # edit bookmarks file
 super + ctrl + b
-	alacritty --class scratchTerm\,bookmarks -e sh -c 'cd ~/.local/share/bookmarks && nvim bookmarks'
+	alacritty --class scratchTerm\,bookmarks -e sh -c 'cd ~/.local/share/bookmarks && nvim -c "set filetype=ini" bookmarks'
 
 # spt - {open,play/pause}
 ctrl + grave ; s ; {o,p}
