@@ -42,7 +42,6 @@ picom --config $HOME/.config/bspwm/picom.conf --vsync &
 #hide mouse when not moving - 'pacman -S unclutter'
 unclutter -grab &
 
-#lock screen on idle timer
-$HOME/.config/bspwm/scripts/screen-lock-on-idle.sh &
+xfce4-power-manager &
 
 python3 $HOME/DevLab/Scripts/ron_bot/main.py &
