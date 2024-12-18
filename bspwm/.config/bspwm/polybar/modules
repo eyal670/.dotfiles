@@ -72,7 +72,7 @@ format-muted-prefix-font = 2
 format-muted-prefix-foreground = ${color.background}
 format-muted-prefix-background = ${color.green}
 
-label-volume = "%percentage%% | %{A1:pavucontrol:}%{A}"
+label-volume = "%percentage%%"
 label-muted = "Mute"
 
 label-volume-background = ${color.green}
@@ -260,7 +260,7 @@ format-margin = 0
 time = "%I:%M %p"
 time-alt = "%A, %d/%m/%y"
 
-format-prefix =  | %{A1:gnome-calendar &:}%{A} | 
+format-prefix =  %{A1:gnome-calendar &:} %{A} |
 format-prefix-foreground = ${color.background}
 format-prefix-background = ${color.blue}
 
@@ -268,7 +268,6 @@ label = %time%
 label-foreground = ${color.background}
 label-background = ${color.blue}
 label-padding = 1
-
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/full-time]
@@ -277,7 +276,7 @@ interval = 1
 format-margin = 0
 time = "%A, %d/%m/%y %I:%M %p"
 
-format-prefix = %{A1:alacritty --class calcure\,calcure -e calcure &:}%{A} | 
+format-prefix = %{A1:alacritty --class calcure\,calcure -e calcure &:}%{A} |
 format-prefix-foreground = ${color.background}
 format-prefix-background = ${color.blue}
 
@@ -512,3 +511,16 @@ format-foreground = ${color.background}
 format-background = ${color.blue}
 format-padding=0
 click-left = $HOME/.config/bspwm/polybar/scripts/toggle-screen-timeout.sh &
+
+;; ------
+
+[module/profile-switcher]
+type=custom/script
+exec = $HOME/.config/bspwm/polybar/scripts/profile-switcher/state.sh &
+interval = 5
+format = <label>
+format-foreground = ${color.background}
+format-background = ${color.blue}
+format-padding=1
+format-font = 5
+click-left = notify-send "not yet implemented"
