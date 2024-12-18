@@ -51,3 +51,14 @@ end
 
 -- if you only want these mappings for toggle term use term://*toggleterm#* instead
 vim.cmd('autocmd! TermOpen term://*toggleterm#* lua set_terminal_keymaps()')
+
+-- scroll behavior
+-- vim.keymap.set("n", "j", "jzz")
+-- vim.keymap.set("n", "k", "kzz")
+-- vim.keymap.set("n", "#", "#zz")
+-- vim.keymap.set("n", "*", "*zz")
+-- vim.keymap.set("n", "n", "nzz")
+-- vim.keymap.set("n", "N", "Nzz")
+vim.keymap.set("n", "G", "Gzz")
+-- vim.keymap.set("n", "gj", "gjzz")
+-- vim.keymap.set("n", "gk", "gkzz")
