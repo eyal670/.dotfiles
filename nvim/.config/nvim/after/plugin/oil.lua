@@ -10,6 +10,9 @@ require("oil").setup({
     is_always_hidden = function(name, bufnr)
       return false
     end,
-  }
+  },
+  win_options = {
+    signcolumn = "auto:1",
+  },
 })
 vim.keymap.set("n", "-", require("oil").open, { desc = "Open parent directory" })
