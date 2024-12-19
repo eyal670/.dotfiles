@@ -9,7 +9,7 @@ PS1+='%{$reset_color%}$%b '
 # History in cache directory:
 HISTSIZE=10000
 SAVEHIST=10000
-HISTFILE=~/.cache/zsh/history
+HISTFILE=~/.cache/zsh/history # fix no history preserve: create the folder ~/.cache/zsh/
 
 # The meaning of these options can be found in man page of `zshoptions`.
 setopt HIST_IGNORE_ALL_DUPS  # do not put duplicated command into history list
