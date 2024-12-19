@@ -1,10 +1,19 @@
 return   -- Useful plugin to show you pending keybinds.
-  { 'folke/which-key.nvim', opts = {
-    window = {
-      border = "single", -- none, single, double, shadow
-      position = "bottom", -- bottom, top
-      margin = { 1, 0, 1, 0 }, -- extra window margin [top, right, bottom, left]
-      padding = { 1, 2, 1, 2 }, -- extra window padding [top, right, bottom, left]
-      winblend = 0, -- value between 0-100 0 for fully opaque and 100 for fully transparent
-    }
-  } }
+{
+  "folke/which-key.nvim",
+  event = "VeryLazy",
+  opts = {
+    -- your configuration comes here
+    -- or leave it empty to use the default settings
+    -- refer to the configuration section below
+  },
+  keys = {
+    {
+      "<leader>?",
+      function()
+        require("which-key").show({ global = false })
+      end,
+      desc = "Buffer Local Keymaps (which-key)",
+    },
+  },
+}
