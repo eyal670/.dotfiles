@@ -295,12 +295,12 @@ interval = 30
 fixed-values = true
 
 format-mounted = <label-mounted>
-format-mounted-prefix = " "
+format-mounted-prefix = " "
 format-mounted-prefix-foreground = ${color.background}
 format-mounted-prefix-background = ${color.cyan}
 
 format-unmounted = <label-unmounted>
-format-unmounted-prefix = " "
+format-unmounted-prefix = " "
 format-unmounted-prefix-foreground = ${color.background}
 format-unmounted-prefix-background = ${color.cyan}
 
@@ -319,7 +319,7 @@ type = internal/memory
 interval = 1
 
 format = <label>
-format-prefix = " "
+format-prefix = " " 
 format-prefix-foreground = ${color.background}
 format-foreground = ${color.background}
 format-background = ${color.yellow}
@@ -330,7 +330,7 @@ label = "%{A1:alacritty --class bpytop\,bpytop -e bpytop &:} %mb_used% %{A}"
 
 [module/launcher]
 type=custom/text
-content = 
+content =  |
 content-font = 4
 content-foreground= ${color.background}
 content-background = ${color.blue} 
@@ -452,10 +452,11 @@ click-left = playerctl --player=spotify_player previous
 type=custom/script
 exec =$HOME/.config/bspwm/polybar/scripts/check-arch-updates.sh 
 format = <label>
-format-prefix = " | 祝:"
+format-prefix = "󰅢  "
 format-prefix-foreground = ${color.background}
 format-foreground = ${color.background}
 format-background = ${color.blue}
+format-font = 5
 tail = true
 interval = 3600
 click-left = alacritty -e sudo pacman -Syyu && dunstify "updates complete"
@@ -466,10 +467,11 @@ click-left = alacritty -e sudo pacman -Syyu && dunstify "updates complete"
 type=custom/script
 exec =$HOME/.config/bspwm/polybar/scripts/check-aur-updates.sh 
 format = <label>
-format-prefix = " | ﴻ:"
+format-prefix = "|󰇚 "
 format-prefix-foreground = ${color.background}
 format-foreground = ${color.background}
 format-background = ${color.blue}
+format-font = 5
 tail = true
 interval = 3600 
 click-left = alacritty -e paru -Syyu --batchinstall && dunstify "updates complete"
@@ -480,7 +482,7 @@ click-left = alacritty -e paru -Syyu --batchinstall && dunstify "updates complet
 type=custom/script
 exec =$HOME/.config/bspwm/polybar/scripts/list-orphans.sh 
 format = <label>
-format-prefix = " | :"
+format-prefix = "| "
 format-prefix-foreground = ${color.background}
 format-foreground = ${color.background}
 format-background = ${color.blue}
