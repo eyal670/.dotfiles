@@ -448,7 +448,7 @@ click-left = playerctl --player=spotify_player previous
 type=custom/script
 exec =$HOME/.config/bspwm/polybar/scripts/check-arch-updates.sh 
 format = <label>
-format-prefix = "󰅢  "
+format-prefix = "󰅢 "
 format-prefix-foreground = ${color.background}
 format-foreground = ${color.background}
 format-background = ${color.blue}
@@ -463,7 +463,7 @@ click-left = alacritty -e sudo pacman -Syyu && dunstify "updates complete"
 type=custom/script
 exec =$HOME/.config/bspwm/polybar/scripts/check-aur-updates.sh 
 format = <label>
-format-prefix = "|󰇚 "
+format-prefix = "|󰇚"
 format-prefix-foreground = ${color.background}
 format-foreground = ${color.background}
 format-background = ${color.blue}
