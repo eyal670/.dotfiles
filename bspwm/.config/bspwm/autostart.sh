@@ -8,15 +8,16 @@ function run {
 }
 
 # make external monitor as primary
-monitor=$(xrandr | grep " connected " | grep -e "HDMI" | awk '{ print$1 }')
-if [ $monitor ]; then
-    xrandr --output $monitor --primary
-    notify-send "autostart.sh:" "set monitor $monitor as primary"
+HDMI_monitor=$(xrandr | grep " connected " | grep -e "HDMI" | awk '{ print$1 }')
+connected_monitor=$(xrandr | grep " connected " | awk '{ print$1 }')
+if [ $HDMI_monitor ]; then
+    xrandr --output $HDMI_monitor --primary
+    notify-send "autostart.sh:" "set monitor $HDMI_monitor as primary"
     # /home/eyal/.screenlayout/laptop-right.sh
     # notify-send "autostart.sh:" "set laptop position to right"
 else
-    xrandr --output eDP-1 --primary
-    notify-send "autostart.sh:" "set monitor eDP-1 as primary"
+    xrandr --output $connected_monitor --primary
+    notify-send "autostart.sh:" "set monitor $connected_monitor as primary"
 fi
 
 $HOME/.config/bspwm/polybar/launch.sh &
@@ -43,5 +44,6 @@ picom --config $HOME/.config/bspwm/picom.conf --vsync &
 unclutter -grab &
 
 xfce4-power-manager &
+optimus-manager-qt &
 
 python3 $HOME/DevLab/Scripts/ron_bot/main.py &
