@@ -19,7 +19,7 @@ playback_window_width = 6
 enable_media_control = true
 enable_streaming = "Always"
 enable_cover_image_cache = true
-default_device = "idea320-spotify-player"
+default_device = "asus-arch-spotify-player"
 
 [copy_command]
 command = "xclip"
@@ -29,7 +29,7 @@ args = [
 ]
 
 [device]
-name = "idea320-spotify-player"
+name = "asus-arch-spotify-player"
 device_type = "speaker"
 volume = 100
 bitrate = 320
