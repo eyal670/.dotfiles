@@ -65,7 +65,7 @@ lsp.configure('intelephense', {
           '/home/eyal/.config/composer/vendor/arifpavel' }
       },
       files = {
-        maxSize = 786400,
+        maxSize = 10000000,
       },
     },
   },
