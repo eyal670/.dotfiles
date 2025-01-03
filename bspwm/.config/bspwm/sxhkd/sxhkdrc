@@ -2,9 +2,9 @@
 super + Escape
     pkill -USR1 -x sxhkd
 
-# open Alacritty
-super + Return
-   alacritty
+# open terminal
+super + {Return,a}
+   {ghostty -e zsh,alacritty}
 
 # Rofi & dmenu
 # launch any application
