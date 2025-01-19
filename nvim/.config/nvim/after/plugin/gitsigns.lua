@@ -1,1 +1,5 @@
 vim.keymap.set("n", "<leader>gl", ':Gitsigns blame_line<CR>', { desc = "blame line" })
+vim.keymap.set("n", "<leader>gj", ':Gitsigns next_hunk<CR>', { desc = "jump to next junk" })
+vim.keymap.set("n", "<leader>gk", ':Gitsigns prev_hunk<CR>', { desc = "jump to prev hunk" })
+vim.keymap.set("n", "<leader>gtd", ':Gitsigns toggle_deleted<CR>', { desc = "toggle deleted" })
+vim.keymap.set("n", "<leader>gtb", ':Gitsigns toggle_current_line_blame<CR>', { desc = "toggle current line blame" })
