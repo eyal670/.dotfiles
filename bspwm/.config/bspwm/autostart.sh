@@ -7,18 +7,8 @@ function run {
   fi
 }
 
-# make external monitor as primary
-HDMI_monitor=$(xrandr | grep " connected " | grep -e "HDMI" | awk '{ print$1 }')
-connected_monitor=$(xrandr | grep " connected " | awk '{ print$1 }')
-if [ $HDMI_monitor ]; then
-    xrandr --output $HDMI_monitor --primary
-    notify-send "autostart.sh:" "set monitor $HDMI_monitor as primary"
-    # /home/eyal/.screenlayout/laptop-right.sh
-    # notify-send "autostart.sh:" "set laptop position to right"
-else
-    xrandr --output $connected_monitor --primary
-    notify-send "autostart.sh:" "set monitor $connected_monitor as primary"
-fi
+#config multi-monitors
+$HOME/.config/bspwm/scripts/multi-display.sh
 
 $HOME/.config/bspwm/polybar/launch.sh &
 
@@ -47,3 +37,5 @@ xfce4-power-manager &
 optimus-manager-qt &
 
 python3 $HOME/DevLab/Scripts/ron_bot/main.py &
+
+/home/eyal/.dotfiles/bspwm/.config/bspwm/scripts/screen-lock-on-idle.sh &
