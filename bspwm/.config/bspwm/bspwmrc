@@ -80,4 +80,4 @@ bspc rule -a FileZilla desktop='5' follow=on
 bspc rule -a Anydesk desktop='7' follow=on
 bspc rule -a Rustdesk desktop='7' follow=on
 bspc rule -a Postman desktop='6' follow=on
-bspc rule -a Local desktop='15' follow=on
+# bspc rule -a Local desktop='15' follow=on
