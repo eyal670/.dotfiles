@@ -417,7 +417,7 @@ format-font = 5
 format-background =${color.cyan}
 format-foreground = ${color.background}
 label = " %output% "
-click-left = playerctl --player=spotify_player play-pause
+click-left = playerctl --player=spotify_player play-pause;playerctl --player=spotify play-pause
 click-right = sh ~/.config/spotify-player/scripts/song_notify.sh
 
 ;; ------
