@@ -131,3 +131,5 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev
 
 # load rust
 source "$HOME/.cargo/env"
+
+source /home/eyal/.config/broot/launcher/bash/br
