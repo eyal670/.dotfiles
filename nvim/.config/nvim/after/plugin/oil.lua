@@ -12,7 +12,7 @@ require("oil").setup({
     end,
   },
   win_options = {
-    signcolumn = "auto:1",
+    signcolumn = "auto:2",
   },
 })
 vim.keymap.set("n", "-", require("oil").open, { desc = "Open parent directory" })
