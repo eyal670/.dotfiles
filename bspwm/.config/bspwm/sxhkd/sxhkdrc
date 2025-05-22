@@ -362,7 +362,7 @@ super + shift + b
 
 # edit bookmarks file
 super + ctrl + b
-	alacritty --class scratchTerm\,bookmarks -e sh -c 'cd ~/.local/share/bookmarks && nvim -c "set filetype=ini" bookmarks'
+	alacritty --class scratchTerm\,bookmarks -e sh -c 'cd ~/.local/share/bookmarks && nvim -c "set filetype=conf" bookmarks'
 
 # launch clients rates selector
 ctrl + grave ; r
