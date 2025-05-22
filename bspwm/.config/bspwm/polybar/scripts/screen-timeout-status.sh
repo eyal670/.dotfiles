@@ -5,7 +5,7 @@ STATE=$(xset q | grep "DPMS is" | awk '{print $3}')
 
 # Run commands based on the value of STATE variable
 if [ "$STATE" = "Enabled" ]; then
-    echo  
+  echo " "
 elif [ "$STATE" = "Disabled" ]; then
-    echo  !
+  echo " !"
 fi
