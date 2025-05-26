@@ -244,7 +244,7 @@ label-private = " Private"
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = "   "
+format-prefix = " "
 format-padding = 0
 format-prefix-foreground = ${color.background}
 format-foreground = ${color.background}
@@ -315,7 +315,7 @@ type = internal/memory
 interval = 1
 
 format = <label>
-format-prefix = " " 
+format-prefix = " " 
 format-prefix-foreground = ${color.background}
 format-foreground = ${color.background}
 format-background = ${color.yellow}
