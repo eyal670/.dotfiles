@@ -1,0 +1,61 @@
+{
+	"jQuery doc ready": {
+		"prefix": "s.jQuery doc ready",
+		"body": [
+			"jQuery( document ).ready(function() {",
+			"\t$1",
+			"});"
+		],
+		"description": "add jQuery doc ready wrapper"
+	},
+	"$ doc ready": {
+		"prefix": "s.$ doc ready",
+		"body": [
+			"$( document ).ready(function() {",
+			"\t$1",
+			"});"
+		],
+		"description": "add $ doc ready wrapper"
+	},
+	"no click": {
+		"prefix": "s.on click",
+		"body": [
+			"jQuery('${1:add css selector here}').click(function(){",
+			"\t$2",
+			"});",
+			"$3"
+		],
+		"description": "add jQuery on click event"
+	},
+	"jQuery Object": {
+		"prefix": "s.jQuery Object",
+		"body": [
+			"jQuery( ${1:'$2'} ).$3"
+		],
+		"description": "add jQuery object"
+	},
+	"console error": {
+		"prefix": "s.console error",
+		"body": [
+			"console.error(${1:'${2:crash}'});",
+			"$3"
+		],
+		"description": "output console error msg"
+	},
+	"console log color": {
+		"prefix": "s.console log color",
+		"body": [
+			"console.log('%c $1 ', 'color:${2:#}${3:000};background:${4:yellow};');",
+			"$5"
+		],
+		"description": "output console error msg"
+	},
+	"console log": {
+		"prefix": "s.console log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "output console error msg"
+	}
+}
