@@ -8,7 +8,7 @@ export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
 BATTERY_CAPACITY=$(cat /sys/class/power_supply/BAT0/capacity)
 BATTERY_STATUS=$(cat /sys/class/power_supply/BAT0/status)
 
-ALERT_LIMIT=22
+ALERT_LIMIT=15
 LOW_LIMIT=5
 
 if [[ $BATTERY_CAPACITY -le $ALERT_LIMIT && $BATTERY_CAPACITY -gt $LOW_LIMIT && $BATTERY_STATUS = "Discharging" ]]; then
