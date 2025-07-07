@@ -366,7 +366,7 @@ super + ctrl + b
 
 # launch clients rates selector
 ctrl + grave ; r
-	grep -v '^#' ~/.local/share/clients/clients | column -t -s $'#' | rofi -dmenu -p "bookmarks:" -i -no-show-icons | awk '{print $NF}' | xclip -selection clipboard
+	grep -v '^#' ~/.local/share/clients/clients | column -t -s $'#' | rofi -dmenu -p "client:" -i -no-show-icons | awk '{print $NF}' | xclip -selection clipboard
 
 # edit clients rates file
 super + alt + r
