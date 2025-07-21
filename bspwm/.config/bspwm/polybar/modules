@@ -388,7 +388,7 @@ format-prefix-foreground = ${color.background}
 format-foreground = ${color.background}
 format-background = ${color.magenta}
 tail = true
-interval = 120
+interval = 5
 click-left = curl -s -4 icanhazip.com | xclip -selection clipboard && notify-send "ip v4 copied to cliboard"
 click-right = curl -s -6 icanhazip.com | xclip -selection clipboard && notify-send "ip v6 copied to cliboard"
 
