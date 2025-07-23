@@ -224,7 +224,7 @@ super + shift + Down
 super + ctrl + {Left,Down,Up,Right}
 	bspc node --{focus} {west,south,north,east}
 
-# Contract tiled space
+# resize window splitting ratio, Contract tiled space
 super + ctrl + {h,j,k,l}
 	bspc node {@east -r -10,@north -r +10,@south -r -10,@west -r +10}
 
