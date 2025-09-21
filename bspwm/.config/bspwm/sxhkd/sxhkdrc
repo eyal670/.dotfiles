@@ -4,7 +4,7 @@ super + Escape
 
 # open terminal
 super + {Return,a}
-   {ghostty -e zsh,alacritty}
+   {alacritty,ghostty -e zsh}
 
 # Rofi & dmenu
 # launch any application
