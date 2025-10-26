@@ -37,3 +37,5 @@ vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "copy to sys clipboa
 vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "copy CurPos to eol to sys clipboard" })
 
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { desc = "delete without overwrite clipboard" })
+
+vim.keymap.set({ "x" }, "p", "P", { desc = "paste without overwrite clipboard with selected string" })
