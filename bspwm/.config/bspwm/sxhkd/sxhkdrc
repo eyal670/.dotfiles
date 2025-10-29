@@ -73,19 +73,19 @@ ctrl + alt + s
 #Audio Keybindings
 
 XF86AudioRaiseVolume
-        amixer -c 1 -- sset Master 2db+
+    pamixer -d 5
 
 XF86AudioLowerVolume
-        amixer -c 1 -- sset Master 2db-
+    pamixer -d 5
 
 XF86AudioMute
-        amixer -c 1 -- sset Master toggle
+    pamixer -t
 
 alt + d
-        amixer -c 1 -- sset Master 2db+
+    pamixer -i 5
 
 alt + a
-        amixer -c 1 -- sset Master 2db-
+    pamixer -d 5
 
 XF86AudioPlay
     playerctl play-pause
