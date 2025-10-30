@@ -72,39 +72,51 @@ ctrl + alt + s
 
 #Audio Keybindings
 
+#volume up
 XF86AudioRaiseVolume
-    pamixer -d 5
+    pamixer -i 5
 
+#volume down
 XF86AudioLowerVolume
     pamixer -d 5
 
+#volume mute toggle
 XF86AudioMute
     pamixer -t
 
+#volume up
 alt + d
     pamixer -i 5
 
+#volume down
 alt + a
     pamixer -d 5
 
+#player play-pause toggle
 XF86AudioPlay
     playerctl play-pause
 
+#player play-pause toggle
 ctrl + alt + p
     playerctl play-pause
 
+#player next
 XF86AudioNext
     playerctl next
 
+#player previous
 XF86AudioPrev
     playerctl previous
 
+#player next
 ctrl + shift + period
     playerctl next
 
+#player previous
 ctrl + shift + comma
     playerctl previous
 
+#player stop
 XF86AudioStop
     playerctl stop
 
