@@ -30,7 +30,7 @@ super + m
 
 # open Super File Manager in scratchpad
 super + shift + n
-    $HOME/.config/bspwm/scripts/bspwm-toggle-visibility.sh alacritty "alacritty --class scratchTerm,alacritty -e spf"
+    $HOME/.config/bspwm/scripts/bspwm-toggle-visibility.sh alacritty "alacritty --class scratchTerm,alacritty -e zsh -ic spf"
 
 # open nvim with temp html/css/js files
 super + t
