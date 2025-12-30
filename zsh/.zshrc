@@ -109,6 +109,14 @@ function ntfy-all(){
     curl -d "$1" ntfy.sh/all-x2UausHp1irL
 }
 
+function shower-first () {
+printf "Kenai\nJordi\nAgam\n" | shuf | nl -w1 -s'. ' | while read line; do 
+  sleep 0.4;
+  echo "$line";
+done
+}
+
+
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
