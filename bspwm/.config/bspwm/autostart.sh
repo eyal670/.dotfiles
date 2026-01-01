@@ -1,9 +1,8 @@
 #!/bin/bash
 
 function run {
-  if ! pgrep $1 ;
-  then
-    $@&
+  if ! pgrep $1; then
+    $@ &
   fi
 }
 
@@ -36,6 +35,6 @@ unclutter -grab &
 xfce4-power-manager &
 optimus-manager-qt &
 
-python3 $HOME/DevLab/Scripts/ron_bot/main.py &
+uv run $HOME/DevLab/Scripts/ron_bot/ron_bot.py &
 
 /home/eyal/.dotfiles/bspwm/.config/bspwm/scripts/screen-lock-on-idle.sh &
