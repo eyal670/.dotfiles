@@ -1,1 +1,0 @@
-/home/eyal/.local/share/broot/launcher/fish/br.fish
