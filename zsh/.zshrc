@@ -141,3 +141,5 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev
 source "$HOME/.cargo/env"
 
 source /home/eyal/.config/broot/launcher/bash/br
+
+. "$HOME/.local/bin/env"
