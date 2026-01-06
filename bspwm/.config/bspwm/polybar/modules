@@ -495,7 +495,7 @@ content-font = 5
 content-foreground= ${color.background}
 content-background = ${color.blue} 
 content-padding=0
-click-left = $HOME/.local/bin/uv run $HOME/.config/bspwm/polybar/scripts/trackingtime-today/main.py 
+click-left = $HOME/.config/bspwm/polybar/scripts/trackingtime-today/main.py 
 click-right = $HOME/.config/bspwm/polybar/scripts/trackingtime-today/trackingtime-menu.sh 
 
 ;; ------

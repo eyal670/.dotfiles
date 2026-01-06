@@ -1,9 +1,4 @@
-# /// script
-# requires-python = ">=3.13"
-# dependencies = [
-#     "load-dotenv>=0.1.0",
-# ]
-# ///
+#!/usr/bin/env python3
 
 # Title: TrackingTime today total hrs
 # Description: get total combined hrs from multiple TrackingTime accounts
