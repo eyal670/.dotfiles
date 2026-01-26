@@ -257,7 +257,7 @@ label = "%{A1:alacritty --class scratchpad\,scratchpad -e gtop &:}%percentage%% 
 type = internal/date
 interval = 1
 format-margin = 0
-time = "%I:%M %p"
+time = "%H:%M %d"
 time-alt = "%A, %d/%m/%y"
 
 label = %time%
