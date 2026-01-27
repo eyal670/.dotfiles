@@ -19,6 +19,9 @@ keybLayout=$(setxkbmap -v | awk -F "+" '/symbols/ {print $2}')
 #disable caps lock
 setxkbmap -option caps:escape
 
+#make sure num lock is on
+xset q | grep -q "Num Lock:\s*on" || xdotool key Num_Lock
+
 run sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
 greenclip daemon &
 
