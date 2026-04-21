@@ -97,7 +97,7 @@ bindkey -s '^o' 'lfcd\n'
 function zipfolder {
     FOLDER=$1
     ZIPFILE=$1
-    zip -r "$ZIPFILE.zip" "$FOLDER" -x '*.git*'
+    zip -r "$ZIPFILE.zip" "$FOLDER" -x '*.git*' -x '*/AGENTS.md' -x 'AGENTS.md'
 }
 
 # send ntfy to flip5
