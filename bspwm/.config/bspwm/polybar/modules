@@ -455,7 +455,7 @@ format-background = ${color.blue}
 format-font = 5
 tail = true
 interval = 3600
-click-left = alacritty -e sudo pacman -Syyu && dunstify "updates complete"
+click-left = alacritty -e bash -c 'sudo pacman -Syyu; dunstify "updates complete"; exec bash'
 
 ;; ------
 
@@ -470,7 +470,7 @@ format-background = ${color.blue}
 format-font = 5
 tail = true
 interval = 3600 
-click-left = alacritty -e paru -Syyu --batchinstall && dunstify "updates complete"
+click-left = alacritty -e bash -c 'paru -Syyu --batchinstall && dunstify "updates complete"; exec bash'
 
 ;; ------
 
