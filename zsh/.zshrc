@@ -138,7 +138,10 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 
 # load rust
-source "$HOME/.cargo/env"
+# Only use rustup in interactive shells
+if [[ $- == *i* ]]; then
+    source "$HOME/.cargo/env"
+fi
 
 source /home/eyal/.config/broot/launcher/bash/br
 
