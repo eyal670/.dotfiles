@@ -40,6 +40,6 @@ optimus-manager-qt &
 
 uv run $HOME/DevLab/Scripts/ron_bot/ron_bot.py &
 
-python3 -m http.server 8338 --directory "$HOME/DevLab/local-http/" --bind :: >/dev/null 2>&1 &
+python3 -m http.server 8338 --directory "$HOME/DevLab/local-http/" --bind 0.0.0.0 >/dev/null 2>&1 &
 
 /home/eyal/.dotfiles/bspwm/.config/bspwm/scripts/screen-lock-on-idle.sh &
