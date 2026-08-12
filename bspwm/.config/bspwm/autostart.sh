@@ -38,8 +38,14 @@ unclutter -grab &
 xfce4-power-manager &
 optimus-manager-qt &
 
-uv run $HOME/DevLab/Scripts/ron_bot/ron_bot.py &
+if ! pgrep -f "$HOME/DevLab/Scripts/ron_bot/ron_bot.py" >/dev/null; then
+  uv run "$HOME/DevLab/Scripts/ron_bot/ron_bot.py" >/dev/null 2>&1 &
+fi
 
-python3 -m http.server 8338 --directory "$HOME/DevLab/local-http/" --bind 0.0.0.0 >/dev/null 2>&1 &
+if ! pgrep -f "python3 -m http.server 8338" >/dev/null; then
+  python3 -m http.server 8338 \
+    --directory "$HOME/DevLab/local-http/" \
+    --bind 0.0.0.0 >/dev/null 2>&1 &
+fi
 
 /home/eyal/.dotfiles/bspwm/.config/bspwm/scripts/screen-lock-on-idle.sh &
