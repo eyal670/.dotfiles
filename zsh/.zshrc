@@ -14,6 +14,11 @@ HISTFILE=~/.cache/zsh/history # fix no history preserve: create the folder ~/.ca
 # set editor
 export EDITOR=nvim
 
+# android sdk
+export ANDROID_HOME="$HOME/Android/Sdk"
+export ANDROID_SDK_ROOT="$ANDROID_HOME"
+export PATH="$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:$ANDROID_HOME/cmdline-tools/latest/bin:$PATH"
+
 # The meaning of these options can be found in man page of `zshoptions`.
 setopt HIST_IGNORE_ALL_DUPS  # do not put duplicated command into history list
 setopt HIST_SAVE_NO_DUPS  # do not save duplicated command
