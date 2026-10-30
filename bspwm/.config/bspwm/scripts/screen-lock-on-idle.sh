@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Lock screen on idle timer
-locktimer=60
+locktimer=900
 inminuts=$((locktimer / 60))
 
 if ! pgrep -x xidlehook >/dev/null; then
