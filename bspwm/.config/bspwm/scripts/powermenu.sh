@@ -9,6 +9,6 @@ case "$chosen" in
 	"󰍃  Logout") kill -9 -1  ;;
 	"󰖩  Networks") alacritty --class scratchTerm,scratchTerm -e "nmtui" ;;
 	"  Fix keyboard layout") setxkbmap -option grp:alt_shift_toggle -layout us,il; setxkbmap -option caps:escape; notify-send "keyboard layout fixed" ;;
-	"  Charge full battery") alacritty --class scratchTerm,scratchTerm -e sh -c 'echo "approve chanrging battery to 100%" && sudo tlp fullcharge && notify-send "charge battery to 100%"' ;;
+  "  Charge full battery") alacritty --class scratchTerm,scratchTerm -e sh -c 'echo "Approve charging battery to 100%"; echo 100 | sudo tee /sys/class/power_supply/BAT0/charge_control_end_threshold >/dev/null && notify-send "Charge battery to 100%"' ;;
 	*) exit 1 ;;
 esac
