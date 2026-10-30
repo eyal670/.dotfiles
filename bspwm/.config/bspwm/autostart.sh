@@ -48,4 +48,10 @@ if ! pgrep -f "python3 -m http.server 8338" >/dev/null; then
     --bind 0.0.0.0 >/dev/null 2>&1 &
 fi
 
+#fix missing icons for polybar
+snixembed --fork
+
+#run HPR for window/app time management
+HPR &
+
 /home/eyal/.dotfiles/bspwm/.config/bspwm/scripts/screen-lock-on-idle.sh &
