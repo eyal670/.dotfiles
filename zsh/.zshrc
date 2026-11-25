@@ -59,6 +59,13 @@ function git_branch_name()
   fi
 }
 
+# Download youtube sound track as MP3
+function ytmp3(){ 
+  yt-dlp -x --audio-format mp3 --audio-quality 0 -P "$HOME/Downloads/YouTube" "$1" \
+  && xdg-open "$HOME/Downloads/YouTube"
+}
+
+
 # Enable substitution in the prompt.
 setopt prompt_subst
 
