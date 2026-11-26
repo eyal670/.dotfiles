@@ -79,8 +79,8 @@ function ytmp4() {
 
     yt-dlp --cookies-from-browser firefox \
         -f "bv*+ba/b" --merge-output-format mp4 \
-        -P "$HOME/Videos/YouTube" "$1" \
-        && xdg-open "$HOME/Videos/YouTube"
+        -P "$HOME/Downloads/YouTube" "$1" \
+        && xdg-open "$HOME/Downloads/YouTube"
 }
 
 
