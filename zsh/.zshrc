@@ -61,8 +61,26 @@ function git_branch_name()
 
 # Download youtube sound track as MP3
 function ytmp3(){ 
-  yt-dlp -x --audio-format mp3 --audio-quality 0 -P "$HOME/Downloads/YouTube" "$1" \
+  [[ $# -eq 1 ]] || {
+      echo "Usage: ytmp3 <URL> or ytmp3 <videoID>"
+      return 1
+  }
+
+  yt-dlp --cookies-from-browser firefox -x --audio-format mp3 --audio-quality 0 -P "$HOME/Downloads/YouTube" "$1" \
   && xdg-open "$HOME/Downloads/YouTube"
+}
+
+# Download youtube as MP4
+function ytmp4() {
+    [[ $# -eq 1 ]] || {
+        echo "Usage: ytmp4 <URL> or ytmp4 <videoID>"
+        return 1
+    }
+
+    yt-dlp --cookies-from-browser firefox \
+        -f "bv*+ba/b" --merge-output-format mp4 \
+        -P "$HOME/Videos/YouTube" "$1" \
+        && xdg-open "$HOME/Videos/YouTube"
 }
 
 
